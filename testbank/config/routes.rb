@@ -1,18 +1,15 @@
 Rails.application.routes.draw do
   devise_for :user do
-    get '/signin' => 'devise/sessions#new', as: 'new_user_session'
-    post '/signin' => 'devise/sessions#create', as: 'user_session'
-    delete '/signout' => 'devise/sessiosn#destroy', as: 'destroy_user_session'
-    get '/signup' => 'devise/registration#new', as: 'new_user_registration'
+    get 'signin' => 'devise/sessions#new', as: 'new_user_session'
+    post 'signin' => 'devise/sessions#create', as: 'user_session'
+    delete 'signout' => 'devise/sessiosn#destroy', as: 'destroy_user_session'
+    get 'signup' => 'devise/registration#new', as: 'new_user_registration'
   end
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
   root 'homepage#index'
 
-  get '/about',     to: 'homepage#about',   as: 'about'
-  get '/contact',   to: 'homepage#contact', as: 'contact'
+  get 'about',     to: 'homepage#about',   as: 'about'
+  get 'contact',   to: 'homepage#contact', as: 'contact'
 
   post 'search',       to: 'search_results#search', as: 'search'
   get ':dpm',         to: 'search_results#show_department', as: 'search_dpm'
