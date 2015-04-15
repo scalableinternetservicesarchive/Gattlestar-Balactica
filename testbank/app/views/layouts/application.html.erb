@@ -14,7 +14,7 @@
 	<% if alert %>
 	  <p class="alert alert-danger"><%= alert %></p>
 	<% end %>
-	<%= render 'share/header' %>
+	<%= render partial: 'shared/header' %>
 	<%= yield %>
 
 	<script src="//netdna.bootstrapcdn.com/bootstrap/<%= bootstrap_version %>/js/bootstrap.min.js"></script>
