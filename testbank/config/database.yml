@@ -10,7 +10,8 @@ default: &default
   pool: 5
   timeout: 5000
   username: root
-  socket: /tmp/mysql.sock
+  host: localhost
+  #socket: /tmp/mysql.sock # breaks on linux
 
 development:
   <<: *default
