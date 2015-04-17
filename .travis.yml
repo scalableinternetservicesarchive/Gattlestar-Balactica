@@ -8,4 +8,6 @@ rvm:
   - ruby-head
   - jruby-head
   - ree
+before_script:
+  - mysql -u root -e 'create database cs188_test;'
 script: bundle exec rspec spec
