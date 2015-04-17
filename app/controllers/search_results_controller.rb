@@ -14,6 +14,7 @@ class SearchResultsController < ApplicationController
 	end
 	
 	def show_department
+		Document.initialize(params[:dpm_name])
 	end
 
 	def show_course
