@@ -7,9 +7,13 @@ PROJECT DESCRIPTION:
 LINK TO PIVOTAL TRACKER:	https://www.pivotaltracker.com/projects/1321082/overview
 
 NAME AND PHOTO:
-1.	Hang Yeh
-2.	Emily Hwang
+Hang Yeh
+
+Emily Hwang
+
 ![emily photo](https://avatars3.githubusercontent.com/u/4028447?v=3&s=460)
-3. Colin Fong
-4. Darin Minamoto
+
+Colin Fong
+
+Darin Minamoto
 
