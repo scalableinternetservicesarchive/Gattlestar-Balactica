@@ -8,6 +8,7 @@ LINK TO PIVOTAL TRACKER:	https://www.pivotaltracker.com/projects/1321082/overvie
 
 NAME AND PHOTO:
 Hang Yeh
+![irene photo](https://avatars2.githubusercontent.com/u/4880571?v=3&s=460)
 
 Emily Hwang
 
