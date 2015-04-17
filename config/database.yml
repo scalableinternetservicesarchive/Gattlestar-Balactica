@@ -22,7 +22,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  adapter: mysql12
   database: CS188_test
+  username: travis
+  encoding: utf8
 
 production:
   <<: *default
