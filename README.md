@@ -1,3 +1,6 @@
+**BUILD STATUS**
+[![Build Status](https://travis-ci.org/scalableinternetservices/Gattlestar-Balactica.svg?branch=master)](https://travis-ci.org/scalableinternetservices/Gattlestar-Balactica)
+
 **TEAM NAME:**
 Gattlestar Balastica
 
