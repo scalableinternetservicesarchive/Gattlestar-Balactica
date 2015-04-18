@@ -1,6 +1,7 @@
 class Document < ActiveRecord::Base
-	def self.initialize(dept)
-		@document = Document.find_by(uploader_id: '1')
-		raise
+	def self.search_dept(dept)
+	end
+
+	def self.search_course(dept, course_id)
 	end
 end

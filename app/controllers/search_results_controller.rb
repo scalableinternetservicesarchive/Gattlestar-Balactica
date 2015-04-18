@@ -14,7 +14,9 @@ class SearchResultsController < ApplicationController
 	end
 	
 	def show_department
-		Document.initialize(params[:dpm_name])
+		@department = params[:dpm]
+		@all_courses = Course.search_by_dept(@department)
+		raise
 	end
 
 	def show_course
