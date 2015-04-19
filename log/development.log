@@ -6308,3 +6308,523 @@ WHERE fk.referenced_column_name is not null
   AND fk.table_name = 'users'
 [0m
   [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/" for ::1 at 2015-04-18 23:58:19 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (4.3ms)
+  Rendered shared/_search_bar.html.erb (0.8ms)
+  Rendered shared/_header.html.erb (5.8ms)
+Completed 200 OK in 155ms (Views: 144.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-04-18 23:58:20 -0700
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_search_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.9ms)
+Completed 200 OK in 67ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-18 23:58:20 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-18 23:58:20 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-18 23:58:20 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-18 23:58:20 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-18 23:58:20 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-18 23:58:20 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-18 23:58:20 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-18 23:58:20 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-18 23:58:20 -0700
+
+
+Started POST "/search" for ::1 at 2015-04-18 23:58:26 -0700
+Processing by SearchResultsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EYBku1h7daVRwxs8fbTh681/ZI7yhL/PmU/JylKpvyeyq0SsJiuF4PL5xeUPZ+TZtU1etiejFwyh6ieXp/6gqA==", "dpm_name"=>"Computer Science", "course_name"=>""}
+Redirected to http://localhost:3000/Computer%20Science
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/Computer%20Science" for ::1 at 2015-04-18 23:58:26 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"Computer Science"}
+  [1m[35m (7.9ms)[0m  SELECT COUNT(*) FROM `courses` WHERE (department LIKE '%Computer Science%')
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE (department LIKE '%Computer Science%')[0m
+  Rendered search_results/show_department.html.erb within layouts/application (7.2ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 83ms (Views: 69.6ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-18 23:58:26 -0700
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-18 23:58:26 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-18 23:58:26 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-18 23:58:26 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-18 23:58:26 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-18 23:58:26 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-18 23:58:26 -0700
+
+
+Started GET "/" for ::1 at 2015-04-18 23:59:03 -0700
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.1ms)
+Completed 200 OK in 59ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-18 23:59:03 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-18 23:59:03 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-18 23:59:03 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-18 23:59:03 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-18 23:59:03 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-18 23:59:03 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-18 23:59:03 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-18 23:59:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `courses` (`department`, `course_id`, `professor_last_name`, `professor_first_name`, `test_id`, `created_at`, `updated_at`) VALUES ('Computer Science', '31', 'Smallberg', 'David', '5', '2015-04-19 07:00:05.133463', '2015-04-19 07:00:05.133463')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `courses` (`department`, `course_id`, `professor_last_name`, `professor_first_name`, `test_id`, `created_at`, `updated_at`) VALUES ('Computer Science', '32', 'Nachenberg', 'Carey', '6', '2015-04-19 07:00:05.136275', '2015-04-19 07:00:05.136275')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2015-04-19 00:00:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (2.8ms)
+  Rendered shared/_search_bar.html.erb (1.1ms)
+  Rendered shared/_header.html.erb (7.0ms)
+Completed 200 OK in 116ms (Views: 107.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-19 00:00:22 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-19 00:00:22 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-19 00:00:22 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-19 00:00:22 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-19 00:00:22 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-19 00:00:22 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:00:22 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-19 00:00:22 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:00:22 -0700
+
+
+Started POST "/search" for ::1 at 2015-04-19 00:00:28 -0700
+Processing by SearchResultsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y6hfwvy60rYan/yonwyxbehE4TbswGspCwTnMyd3qzbAg3/Vguoi87mlInHt37RfkHbbDjnnw+ozoQlu0iC0uQ==", "dpm_name"=>"Computer Science", "course_name"=>""}
+Redirected to http://localhost:3000/Computer%20Science
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/Computer%20Science" for ::1 at 2015-04-19 00:00:28 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"Computer Science"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `courses` WHERE (department LIKE '%Computer Science%')
+  [1m[36mCourse Load (1.3ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE (department LIKE '%Computer Science%')[0m
+  Rendered search_results/show_department.html.erb within layouts/application (9.1ms)
+  Rendered shared/_search_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.5ms)
+Completed 200 OK in 93ms (Views: 84.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-19 00:00:28 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-19 00:00:28 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-19 00:00:28 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-19 00:00:28 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-19 00:00:28 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-19 00:00:28 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:00:28 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:00:28 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-19 00:00:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `courses` (`department`, `course_id`, `professor_last_name`, `professor_first_name`, `test_id`, `created_at`, `updated_at`) VALUES ('Computer Science', '31', 'Smallberg', 'David', '5', '2015-04-19 07:06:37.557089', '2015-04-19 07:06:37.557089')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `courses` (`department`, `course_id`, `professor_last_name`, `professor_first_name`, `test_id`, `created_at`, `updated_at`) VALUES ('Computer Science', '32', 'Nachenberg', 'Carey', '6', '2015-04-19 07:06:37.559474', '2015-04-19 07:06:37.559474')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `courses` (`department`, `course_id`, `professor_last_name`, `professor_first_name`, `test_id`, `created_at`, `updated_at`) VALUES ('Computer Science and Biology', 'MLG', 'Shrek', 'Spoderman', '7', '2015-04-19 07:06:37.562217', '2015-04-19 07:06:37.562217')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started POST "/search" for ::1 at 2015-04-19 00:06:51 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SearchResultsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pZfJ7pu3vZJ0P6bY29mZ0/a6pUw0SNM9fOB5aYXpdyoGvOn55edN19cFeAGpCpzhjoifdOFve/5ERZc0cL5opQ==", "dpm_name"=>"Blah", "course_name"=>""}
+Redirected to http://localhost:3000/Blah
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/Blah" for ::1 at 2015-04-19 00:06:51 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"Blah"}
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `courses` WHERE (department LIKE '%Blah%')
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2015-04-19 00:06:51 -0700
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (3.2ms)
+  Rendered shared/_search_bar.html.erb (0.9ms)
+  Rendered shared/_header.html.erb (6.3ms)
+Completed 200 OK in 122ms (Views: 119.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-19 00:06:52 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-19 00:06:52 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-19 00:06:52 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-19 00:06:52 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-19 00:06:52 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-19 00:06:52 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:06:52 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:06:52 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-19 00:06:52 -0700
+
+
+Started POST "/search" for ::1 at 2015-04-19 00:06:59 -0700
+Processing by SearchResultsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DAzhkTw3cUa5iSdX/VnsTLR2CGzQsg9K6Cmo868fuqKvJ8GGQmeBAxqz+Y6Piul+zEQyVAWVp4nQjEauWkilLQ==", "dpm_name"=>"Computer Science", "course_name"=>""}
+Redirected to http://localhost:3000/Computer%20Science
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/Computer%20Science" for ::1 at 2015-04-19 00:07:00 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"Computer Science"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `courses` WHERE (department LIKE '%Computer Science%')[0m
+  [1m[35mCourse Load (0.3ms)[0m  SELECT `courses`.* FROM `courses` WHERE (department LIKE '%Computer Science%')
+  Rendered search_results/show_department.html.erb within layouts/application (9.7ms)
+  Rendered shared/_search_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.6ms)
+Completed 200 OK in 92ms (Views: 90.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-19 00:07:00 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-19 00:07:00 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-19 00:07:00 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-19 00:07:00 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-19 00:07:00 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:07:00 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-19 00:07:00 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:07:00 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-19 00:07:00 -0700
+
+
+Started POST "/search" for ::1 at 2015-04-19 00:07:22 -0700
+Processing by SearchResultsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hMW1R1WzorDf2HknY+ycuDNDQk8cJQ2OUzgchqzPP+Un7pVQK+NS9Xzip/4RP5mKS3F4d8kCpU1rnfLbWZggag==", "dpm_name"=>"Biology", "course_name"=>""}
+Redirected to http://localhost:3000/Biology
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/Biology" for ::1 at 2015-04-19 00:07:22 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"Biology"}
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `courses` WHERE (department LIKE '%Biology%')[0m
+  [1m[35mCourse Load (0.5ms)[0m  SELECT `courses`.* FROM `courses` WHERE (department LIKE '%Biology%')
+  Rendered search_results/show_department.html.erb within layouts/application (1.3ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.2ms)
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-19 00:07:22 -0700
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-19 00:07:22 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-19 00:07:22 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-19 00:07:22 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-19 00:07:22 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-19 00:07:22 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:07:22 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:07:22 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-19 00:07:22 -0700
+
+
+Started POST "/search" for ::1 at 2015-04-19 00:07:42 -0700
+Processing by SearchResultsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LYgpTRcCNa+gOf9dCfW1mOHfRSKVzMFCvXp5j/6akcKOowlaaVLF6gMDIYR7JrCqme1/GkDraYGF35fSC82OTQ==", "dpm_name"=>"and", "course_name"=>""}
+Redirected to http://localhost:3000/and
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/and" for ::1 at 2015-04-19 00:07:42 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"and"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `courses` WHERE (department LIKE '%and%')[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT `courses`.* FROM `courses` WHERE (department LIKE '%and%')
+  Rendered search_results/show_department.html.erb within layouts/application (0.5ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.5ms)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-19 00:07:42 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-19 00:07:42 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-19 00:07:42 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-19 00:07:42 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-19 00:07:42 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-19 00:07:42 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:07:42 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:07:42 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-19 00:07:42 -0700
+
+
+Started POST "/search" for ::1 at 2015-04-19 00:08:37 -0700
+Processing by SearchResultsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"35ZLgEStETvHNqCLWPzz1OUhLkUZ7o6zh2PAER/usL58vWuXOv3hfmQMflIqL/bmnRMUfczJJnC/xi5M6rmvMQ==", "dpm_name"=>"Computer Science", "course_name"=>""}
+Redirected to http://localhost:3000/Computer%20Science
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/Computer%20Science" for ::1 at 2015-04-19 00:08:37 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"Computer Science"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `courses` WHERE (department LIKE '%Computer Science%')[0m
+  [1m[35mCourse Load (0.4ms)[0m  SELECT `courses`.* FROM `courses` WHERE (department LIKE '%Computer Science%')
+  Rendered search_results/show_department.html.erb within layouts/application (2.0ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.3ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-19 00:08:37 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-19 00:08:37 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:08:37 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-19 00:08:37 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-19 00:08:37 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-19 00:08:37 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:08:37 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-19 00:08:37 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-19 00:08:37 -0700
+
+
+Started GET "/Computer%20Science" for ::1 at 2015-04-19 00:09:00 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"Computer Science"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `courses` WHERE (department LIKE 'Computer Science')[0m
+  [1m[35mCourse Load (0.4ms)[0m  SELECT `courses`.* FROM `courses` WHERE (department LIKE 'Computer Science')
+  Rendered search_results/show_department.html.erb within layouts/application (5.5ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.7ms)
+Completed 200 OK in 79ms (Views: 72.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-19 00:09:01 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-19 00:09:01 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-19 00:09:01 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-19 00:09:01 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-19 00:09:01 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-19 00:09:01 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:09:01 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:09:01 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-19 00:09:01 -0700
+
+
+Started GET "/Computer%20Science" for ::1 at 2015-04-19 00:09:14 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"Computer Science"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `courses` WHERE (department LIKE 'Computer Science')[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT `courses`.* FROM `courses` WHERE (department LIKE 'Computer Science')
+  Rendered search_results/show_department.html.erb within layouts/application (0.8ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.3ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-19 00:09:14 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-19 00:09:14 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-19 00:09:14 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-19 00:09:14 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-19 00:09:14 -0700
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-19 00:09:14 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:09:14 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-19 00:09:14 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-19 00:09:14 -0700
