@@ -1,1 +1,8 @@
 show department
+
+<% @all_courses.each do |course| %>
+  <div>
+  Department: <%= course.department %>
+  Course: <%= course.course_id %>
+  </div>
+<% end %>

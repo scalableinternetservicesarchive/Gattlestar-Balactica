@@ -16,7 +16,10 @@ class SearchResultsController < ApplicationController
 	def show_department
 		@department = params[:dpm]
 		@all_courses = Course.search_by_dept(@department)
-		raise
+
+        if @all_courses == nil || @all_courses.empty?
+          return redirect_to root_path, flash: {error: 'There are no courses that have this department!'}
+        end
 	end
 
 	def show_course
