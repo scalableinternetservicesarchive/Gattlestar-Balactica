@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417223552) do
+ActiveRecord::Schema.define(version: 20150420183953) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "department",           limit: 255
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20150417223552) do
   create_table "documents", force: :cascade do |t|
     t.string   "path",         limit: 255
     t.string   "uploader_id",  limit: 255
-    t.string   "doc_type",     limit: 20
+    t.string   "doc_type",     limit: 255
     t.string   "quarter_year", limit: 255
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20150417223552) do
     t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name",             limit: 255,              null: false
+    t.string   "last_name",              limit: 255,              null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
