@@ -21,7 +21,7 @@ class SearchResultsController < ApplicationController
           return redirect_to root_path, flash: {error: 'There are no courses that have this department!'}
         end
 
-		@course_ids = @query_results.uniq.pluck(:course_id)
+		@course_ids = @all_courses.uniq.pluck(:course_id)
 	end
 
 	def show_course
