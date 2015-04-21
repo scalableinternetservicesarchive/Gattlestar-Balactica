@@ -6828,3 +6828,102 @@ Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" 
 
 
 Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-19 00:09:14 -0700
+
+
+Started GET "/" for ::1 at 2015-04-20 17:49:37 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (2.5ms)
+  Rendered shared/_search_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (5.1ms)
+Completed 200 OK in 80ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-20 17:49:38 -0700
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-20 17:49:38 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-20 17:49:38 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-20 17:49:38 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-20 17:49:38 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-20 17:49:38 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-20 17:49:38 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-20 17:49:38 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-20 17:49:38 -0700
+
+
+Started GET "/user/sign_up" for ::1 at 2015-04-20 17:49:42 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (24.5ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.6ms)
+Completed 200 OK in 106ms (Views: 92.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/user/sign_in" for ::1 at 2015-04-20 17:49:45 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (5.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.9ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 73ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for ::1 at 2015-04-20 17:49:56 -0700
+Processing by SearchResultsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NazOUUxBGxCSDT4VAH4WaC50+Hs5g9IC2EgHXngjYtcZ9b2YEgAwgdQC+Z9QRXahSDNPE+i7rjWRrsa3bNXYQg==", "dpm_name"=>"Computer Science", "course_name"=>""}
+Redirected to http://localhost:3000/Computer%20Science
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/Computer%20Science" for ::1 at 2015-04-20 17:49:56 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"Computer Science"}
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM `courses` WHERE (department LIKE 'Computer Science')
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE (department LIKE 'Computer Science')[0m
+  Rendered search_results/show_department.html.erb within layouts/application (5.4ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.8ms)
+Completed 200 OK in 65ms (Views: 59.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-20 17:49:56 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-20 17:49:56 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-20 17:49:56 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-20 17:49:56 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-20 17:49:56 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-20 17:49:56 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-20 17:49:56 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-20 17:49:56 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-20 17:49:56 -0700
