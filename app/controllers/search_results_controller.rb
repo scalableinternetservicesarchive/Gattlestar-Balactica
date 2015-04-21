@@ -20,8 +20,13 @@ class SearchResultsController < ApplicationController
         if @all_courses == nil || @all_courses.empty?
           return redirect_to root_path, flash: {error: 'There are no courses that have this department!'}
         end
+
+		@course_ids = @query_results.uniq.pluck(:course_id)
 	end
 
 	def show_course
+		@department = params[:dpm].titleize
+		@course_id = params[:course]
+		@query_results = Course.search_by_course(@department, @course_id)
 	end
 end
