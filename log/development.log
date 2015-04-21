@@ -6927,3 +6927,12 @@ Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" 
 
 
 Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-20 17:49:56 -0700
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-20 18:12:14 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-20 18:12:14 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-20 18:12:14 -0700
