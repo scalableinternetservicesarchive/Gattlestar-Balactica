@@ -1,1 +1,36 @@
-show course
+<div class="container">
+	<div class="panel panel-default">
+	  <div class="panel-body">
+	    <h2><%= @department %></h2>
+	  </div>
+	</div>
+	<table class="table table-striped table-hover ">
+	  <thead>
+	    <tr>
+	      <th>Professor</th>
+	      <th>Quarter and Year</th>
+	      <th>Document</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<% @query_results.each do |result| %>
+		    <tr>
+		      <td><%= result.format_name %></td>
+		      <td style="white-space:nowrap">
+		      	<% result.search_test_id.each do |test| %>
+		      		<div><%= test.format_quarter_year %></div>
+		      	<% end %>
+		      </td>
+		      <td>
+		      	<% result.test_id.split(',').each do |test_id| %>
+		      		<div class="row">
+		      			<div class="col-sm-4">1</div>
+		      			<div class="col-sm-8">2</div>
+		      		</div>	
+		      	<% end %>
+		      </td>
+		    </tr>
+		<% end %>
+	  </tbody>
+</table> 
+</div>

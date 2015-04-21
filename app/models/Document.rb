@@ -1,7 +1,9 @@
 class Document < ActiveRecord::Base
-	def self.search_dept(dept)
+	def self.search_test(test_id)
+		Document.find(test_id)
 	end
 
-	def self.search_course(dept, course_id)
+	def format_quarter_year
+		quarter_year.sub(/\_/,' ')
 	end
 end

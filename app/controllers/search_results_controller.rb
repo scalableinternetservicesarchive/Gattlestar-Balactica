@@ -14,11 +14,14 @@ class SearchResultsController < ApplicationController
 	end
 	
 	def show_department
-		@department = params[:dpm]
-		@all_courses = Course.search_by_dept(@department)
-		raise
+		@department = params[:dpm].titleize
+		@query_results = Course.search_by_dept(@department)
+		@course_ids = @query_results.uniq.pluck(:course_id)
 	end
 
 	def show_course
+		@department = params[:dpm].titleize
+		@course_id = params[:course]
+		@query_results = Course.search_by_course(@department, @course_id)
 	end
 end

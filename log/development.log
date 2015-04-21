@@ -6308,3 +6308,154 @@ WHERE fk.referenced_column_name is not null
   AND fk.table_name = 'users'
 [0m
   [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `documents` (`path`, `created_at`, `updated_at`) VALUES ('/CS33/COM_SCI_33_Reinman_2009_Spring_MT.pdf', '2015-04-18 04:59:12.262509', '2015-04-18 04:59:12.262509')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (92.5ms)[0m  INSERT INTO `documents` (`uploader_id`, `created_at`, `updated_at`) VALUES ('1', '2015-04-18 04:59:12.265421', '2015-04-18 04:59:12.265421')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `documents` (`path`, `created_at`, `updated_at`) VALUES ('/CS33/COM_SCI_33_Reinman_2009_Spring_MT.pdf', '2015-04-18 05:00:06.762704', '2015-04-18 05:00:06.762704')[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `documents` (`uploader_id`, `created_at`, `updated_at`) VALUES ('1', '2015-04-18 05:00:06.765107', '2015-04-18 05:00:06.765107')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `documents` (`doc_type`, `created_at`, `updated_at`) VALUES ('Test', '2015-04-18 05:00:06.766544', '2015-04-18 05:00:06.766544')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `documents` (`quarter_year`, `created_at`, `updated_at`) VALUES ('2009_Spring', '2015-04-18 05:00:06.768071', '2015-04-18 05:00:06.768071')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `documents` (`path`, `created_at`, `updated_at`) VALUES ('/CS33/COM_SCI_33_Reinman_2010_Spring_MT_1.pdf', '2015-04-18 05:00:06.769419', '2015-04-18 05:00:06.769419')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `documents` (`uploader_id`, `created_at`, `updated_at`) VALUES ('1', '2015-04-18 05:00:06.770673', '2015-04-18 05:00:06.770673')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `documents` (`doc_type`, `created_at`, `updated_at`) VALUES ('Test', '2015-04-18 05:00:06.772004', '2015-04-18 05:00:06.772004')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `documents` (`quarter_year`, `created_at`, `updated_at`) VALUES ('2010_Spring', '2015-04-18 05:00:06.773386', '2015-04-18 05:00:06.773386')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `documents` (`path`, `created_at`, `updated_at`) VALUES ('/CS33/COM_SCI_33_Rohr_2008_Fall_MT.pdf', '2015-04-18 05:00:06.774959', '2015-04-18 05:00:06.774959')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `documents` (`uploader_id`, `created_at`, `updated_at`) VALUES ('1', '2015-04-18 05:00:06.776236', '2015-04-18 05:00:06.776236')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `documents` (`doc_type`, `created_at`, `updated_at`) VALUES ('Test', '2015-04-18 05:00:06.777779', '2015-04-18 05:00:06.777779')[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `documents` (`quarter_year`, `created_at`, `updated_at`) VALUES ('2008_Fall', '2015-04-18 05:00:06.778982', '2015-04-18 05:00:06.778982')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `documents` (`path`, `created_at`, `updated_at`) VALUES ('/CS33/COM_SCI_33_Reinman_2009_Spring_MT.pdf', '2015-04-18 05:01:44.755455', '2015-04-18 05:01:44.755455')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `documents` (`uploader_id`, `created_at`, `updated_at`) VALUES ('1', '2015-04-18 05:01:44.757430', '2015-04-18 05:01:44.757430')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `documents` (`doc_type`, `created_at`, `updated_at`) VALUES ('Test', '2015-04-18 05:01:44.759324', '2015-04-18 05:01:44.759324')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `documents` (`quarter_year`, `created_at`, `updated_at`) VALUES ('2009_Spring', '2015-04-18 05:01:44.761459', '2015-04-18 05:01:44.761459')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `documents` (`path`, `created_at`, `updated_at`) VALUES ('/CS33/COM_SCI_33_Reinman_2010_Spring_MT_1.pdf', '2015-04-18 05:01:44.763306', '2015-04-18 05:01:44.763306')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `documents` (`uploader_id`, `created_at`, `updated_at`) VALUES ('1', '2015-04-18 05:01:44.765261', '2015-04-18 05:01:44.765261')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `documents` (`doc_type`, `created_at`, `updated_at`) VALUES ('Test', '2015-04-18 05:01:44.766752', '2015-04-18 05:01:44.766752')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `documents` (`quarter_year`, `created_at`, `updated_at`) VALUES ('2010_Spring', '2015-04-18 05:01:44.768212', '2015-04-18 05:01:44.768212')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `documents` (`path`, `created_at`, `updated_at`) VALUES ('/CS33/COM_SCI_33_Rohr_2008_Fall_MT.pdf', '2015-04-18 05:01:44.769606', '2015-04-18 05:01:44.769606')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `documents` (`uploader_id`, `created_at`, `updated_at`) VALUES ('1', '2015-04-18 05:01:44.770944', '2015-04-18 05:01:44.770944')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `documents` (`doc_type`, `created_at`, `updated_at`) VALUES ('Test', '2015-04-18 05:01:44.772469', '2015-04-18 05:01:44.772469')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `documents` (`quarter_year`, `created_at`, `updated_at`) VALUES ('2008_Fall', '2015-04-18 05:01:44.773777', '2015-04-18 05:01:44.773777')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `documents` (`path`, `uploader_id`, `doc_type`, `quarter_year`, `created_at`, `updated_at`) VALUES ('/CS33/COM_SCI_33_Reinman_2009_Spring_MT.pdf', '1', 'Test', '2009_Spring', '2015-04-18 05:04:41.285686', '2015-04-18 05:04:41.285686')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `documents` (`path`, `uploader_id`, `doc_type`, `quarter_year`, `created_at`, `updated_at`) VALUES ('/CS33/COM_SCI_33_Reinman_2010_Spring_MT_1.pdf', '1', 'Test', '2010_Spring', '2015-04-18 05:04:41.287902', '2015-04-18 05:04:41.287902')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `documents` (`path`, `uploader_id`, `doc_type`, `quarter_year`, `created_at`, `updated_at`) VALUES ('/CS33/COM_SCI_33_Rohr_2008_Fall_MT.pdf', '1', 'Test', '2008_Fall', '2015-04-18 05:04:41.289592', '2015-04-18 05:04:41.289592')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `courses` (`department`, `course_id`, `professor_last_name`, `professor_first_name`, `test_id`, `created_at`, `updated_at`) VALUES ('Computer Science', '33', 'Reinman', 'Glen', '4', '2015-04-18 05:08:32.717815', '2015-04-18 05:08:32.717815')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `courses` (`department`, `course_id`, `professor_last_name`, `professor_first_name`, `test_id`, `created_at`, `updated_at`) VALUES ('Computer Science', '33', 'Reinman', 'Glen', '5', '2015-04-18 05:08:32.719892', '2015-04-18 05:08:32.719892')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `courses` (`department`, `course_id`, `professor_last_name`, `professor_first_name`, `test_id`, `created_at`, `updated_at`) VALUES ('Computer Science', '33', 'Rohr', 'John', '6', '2015-04-18 05:08:32.721774', '2015-04-18 05:08:32.721774')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2015-04-20 17:47:33 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (9.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (3.6ms)
+  Rendered shared/_search_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (6.0ms)
+Completed 200 OK in 134ms (Views: 126.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-20 17:47:36 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (1.3ms)[0m  SELECT `courses`.* FROM `courses` WHERE `courses`.`department` = 'Computer Science' AND `courses`.`course_id` = '31'
+  [1m[36mDocument Load (0.3ms)[0m  [1mSELECT  `documents`.* FROM `documents` WHERE `documents`.`id` = 1 LIMIT 1[0m
+  Rendered search_results/show_course.html.erb within layouts/application (22.5ms)
+  Rendered shared/_search_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (3.0ms)
+Completed 200 OK in 82ms (Views: 69.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/Computer%20Science/32" for ::1 at 2015-04-20 17:47:40 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"32"}
+  [1m[35mCourse Load (0.6ms)[0m  SELECT `courses`.* FROM `courses` WHERE `courses`.`department` = 'Computer Science' AND `courses`.`course_id` = '32'
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT  `documents`.* FROM `documents` WHERE `documents`.`id` = 2 LIMIT 1[0m
+  [1m[35mDocument Load (0.1ms)[0m  SELECT  `documents`.* FROM `documents` WHERE `documents`.`id` = 3 LIMIT 1
+  Rendered search_results/show_course.html.erb within layouts/application (2.0ms)
+  Rendered shared/_search_bar.html.erb (0.9ms)
+  Rendered shared/_header.html.erb (2.8ms)
+Completed 200 OK in 64ms (Views: 62.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/search" for ::1 at 2015-04-20 17:47:48 -0700
+Processing by SearchResultsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2fmaMQhWbPFonJOrz6xeXSvcVeYgwW85ym/9XeXXH+v1oOn4VhdHYC6TVCGflz6UTZvijvH5Ew6DiTy08SGlfg==", "dpm_name"=>"CS", "course_name"=>""}
+Redirected to http://localhost:3000/CS
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/CS" for ::1 at 2015-04-20 17:47:48 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"CS"}
+  [1m[36m (0.3ms)[0m  [1mSELECT DISTINCT `courses`.`course_id` FROM `courses` WHERE `courses`.`department` = 'Cs'[0m
+  Rendered search_results/show_department.html.erb within layouts/application (0.6ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.7ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.3ms)
