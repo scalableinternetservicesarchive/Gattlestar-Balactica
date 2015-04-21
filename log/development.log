@@ -1,0 +1,78 @@
+
+
+Started GET "/" for ::1 at 2015-04-20 18:18:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (4.8ms)
+  Rendered shared/_search_bar.html.erb (1.0ms)
+  Rendered shared/_header.html.erb (6.2ms)
+Completed 200 OK in 133ms (Views: 125.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-20 18:18:26 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-20 18:18:26 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-20 18:18:26 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-20 18:18:26 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-20 18:18:26 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-20 18:18:26 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-20 18:18:26 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-20 18:18:26 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-20 18:18:26 -0700
+
+
+Started GET "/user/sign_up" for ::1 at 2015-04-20 18:18:29 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (30.4ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 113ms (Views: 103.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-20 18:18:33 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT `courses`.* FROM `courses` WHERE `courses`.`department` = 'Computer Science' AND `courses`.`course_id` = '31'
+  [1m[36mDocument Load (0.3ms)[0m  [1mSELECT  `documents`.* FROM `documents` WHERE `documents`.`id` = 1 LIMIT 1[0m
+  Rendered search_results/show_course.html.erb within layouts/application (22.3ms)
+  Rendered shared/_search_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (2.8ms)
+Completed 200 OK in 82ms (Views: 69.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/Math/31B" for ::1 at 2015-04-20 18:18:36 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Math", "course"=>"31B"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT `courses`.* FROM `courses` WHERE `courses`.`department` = 'Math' AND `courses`.`course_id` = '31B'
+  Rendered search_results/show_course.html.erb within layouts/application (0.6ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (2.0ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/Computer%20Science/32" for ::1 at 2015-04-20 18:18:38 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"32"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE `courses`.`department` = 'Computer Science' AND `courses`.`course_id` = '32'[0m
+  [1m[35mDocument Load (0.1ms)[0m  SELECT  `documents`.* FROM `documents` WHERE `documents`.`id` = 2 LIMIT 1
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT  `documents`.* FROM `documents` WHERE `documents`.`id` = 3 LIMIT 1[0m
+  Rendered search_results/show_course.html.erb within layouts/application (1.4ms)
+  Rendered shared/_search_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (2.9ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.5ms)
