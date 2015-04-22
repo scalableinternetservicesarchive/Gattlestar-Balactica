@@ -1454,3 +1454,1836 @@ Processing by SearchResultsController#show_course as HTML
   Rendered shared/_search_bar.html.erb (0.3ms)
   Rendered shared/_header.html.erb (1.8ms)
 Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-04-21 17:36:50 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (2.9ms)
+  Rendered shared/_search_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (5.8ms)
+Completed 200 OK in 114ms (Views: 106.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-04-21 17:36:50 -0700
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (1.3ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 44ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 17:36:51 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 17:36:51 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 17:36:51 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 17:36:51 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 17:36:51 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 17:36:51 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 17:36:51 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 17:36:51 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 17:36:51 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "documents" ("path", "uploader_id", "doc_type", "quarter_year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["path", "/CS31/COM_SCI_31_Unknown_2010_Fall_MT.pdf"], ["uploader_id", "1"], ["doc_type", "Test"], ["quarter_year", "2010_Fall"], ["created_at", "2015-04-22 00:41:25.279517"], ["updated_at", "2015-04-22 00:41:25.279517"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "documents" ("path", "uploader_id", "doc_type", "quarter_year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["path", "/CS32/COM_SCI_32_Nachenberg_2012_Winter_MT.pdf"], ["uploader_id", "1"], ["doc_type", "Test"], ["quarter_year", "2012_Winter"], ["created_at", "2015-04-22 00:41:25.283991"], ["updated_at", "2015-04-22 00:41:25.283991"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "documents" ("path", "uploader_id", "doc_type", "quarter_year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["path", "/CS32/COM_SCI_32_Smallberg_2007_Winter_MT.pdf"], ["uploader_id", "1"], ["doc_type", "Test"], ["quarter_year", "2007_Winter"], ["created_at", "2015-04-22 00:41:25.285821"], ["updated_at", "2015-04-22 00:41:25.285821"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("department", "course_id", "professor_last_name", "professor_first_name", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["department", "Computer Science"], ["course_id", "31"], ["professor_last_name", "Smallberg"], ["professor_first_name", "David"], ["test_id", "4"], ["created_at", "2015-04-22 00:44:24.012055"], ["updated_at", "2015-04-22 00:44:24.012055"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("department", "course_id", "professor_last_name", "professor_first_name", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["department", "Computer Science"], ["course_id", "32"], ["professor_last_name", "Nachenberg"], ["professor_first_name", "Carey"], ["test_id", "5"], ["created_at", "2015-04-22 00:44:24.017416"], ["updated_at", "2015-04-22 00:44:24.017416"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("department", "course_id", "professor_last_name", "professor_first_name", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["department", "Computer Science"], ["course_id", "32"], ["professor_last_name", "Smallberg"], ["professor_first_name", "David"], ["test_id", "6"], ["created_at", "2015-04-22 00:44:24.019473"], ["updated_at", "2015-04-22 00:44:24.019473"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("department", "course_id", "professor_last_name", "professor_first_name", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["department", "Computer Science"], ["course_id", "33"], ["professor_last_name", "Reinman"], ["professor_first_name", "Glen"], ["test_id", "1,2"], ["created_at", "2015-04-22 00:44:24.021462"], ["updated_at", "2015-04-22 00:44:24.021462"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("department", "course_id", "professor_last_name", "professor_first_name", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["department", "Computer Science"], ["course_id", "33"], ["professor_last_name", "Rohr"], ["professor_first_name", "John"], ["test_id", "3"], ["created_at", "2015-04-22 00:44:24.024127"], ["updated_at", "2015-04-22 00:44:24.024127"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("department", "course_id", "professor_last_name", "professor_first_name", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["department", "Computer Science"], ["course_id", "31"], ["professor_last_name", "Smallberg"], ["professor_first_name", "David"], ["test_id", "4"], ["created_at", "2015-04-22 00:47:07.421007"], ["updated_at", "2015-04-22 00:47:07.421007"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("department", "course_id", "professor_last_name", "professor_first_name", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["department", "Computer Science"], ["course_id", "32"], ["professor_last_name", "Nachenberg"], ["professor_first_name", "Carey"], ["test_id", "5"], ["created_at", "2015-04-22 00:47:07.425857"], ["updated_at", "2015-04-22 00:47:07.425857"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("department", "course_id", "professor_last_name", "professor_first_name", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["department", "Computer Science"], ["course_id", "32"], ["professor_last_name", "Smallberg"], ["professor_first_name", "David"], ["test_id", "6"], ["created_at", "2015-04-22 00:47:07.428222"], ["updated_at", "2015-04-22 00:47:07.428222"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("department", "course_id", "professor_last_name", "professor_first_name", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["department", "Computer Science"], ["course_id", "33"], ["professor_last_name", "Reinman"], ["professor_first_name", "Glen"], ["test_id", "1,2"], ["created_at", "2015-04-22 00:47:07.430539"], ["updated_at", "2015-04-22 00:47:07.430539"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("department", "course_id", "professor_last_name", "professor_first_name", "test_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["department", "Computer Science"], ["course_id", "33"], ["professor_last_name", "Rohr"], ["professor_first_name", "John"], ["test_id", "3"], ["created_at", "2015-04-22 00:47:07.432454"], ["updated_at", "2015-04-22 00:47:07.432454"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 17:48:57 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ?[0m  [["id", 4]]
+  Rendered search_results/show_course.html.erb within layouts/application (18.8ms)
+Completed 500 Internal Server Error in 32ms
+
+NoMethodError - undefined method `format_quarter_year' for #<Document::ActiveRecord_Relation:0x007f9864e87160>:
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:136:in `method_missing'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:99:in `method_missing'
+  app/views/search_results/show_course.html.erb:21:in `block (2 levels) in _app_views_search_results_show_course_html_erb___4038402232445226134_70146251376560'
+  app/views/search_results/show_course.html.erb:20:in `block in _app_views_search_results_show_course_html_erb___4038402232445226134_70146251376560'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:46:in `each'
+  app/views/search_results/show_course.html.erb:16:in `_app_views_search_results_show_course_html_erb___4038402232445226134_70146251376560'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/template.rb:145:in `block in render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:166:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/template.rb:333:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/template.rb:143:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:14:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/renderer.rb:23:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:100:in `_render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:83:in `render_to_body'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/rendering.rb:25:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:16:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:117:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:137:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:30:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:195:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:236:in `block in action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:42:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:802:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/etag.rb:24:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/conditionalget.rb:25:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/head.rb:13:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/query_cache.rb:36:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/migration.rb:378:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 17:48:57 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = ?[0m  [["id", 4]]
+  Rendered search_results/show_course.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 11ms
+
+NoMethodError - undefined method `format_quarter_year' for #<Document::ActiveRecord_Relation:0x007f986786d718>:
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:136:in `method_missing'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:99:in `method_missing'
+  app/views/search_results/show_course.html.erb:21:in `block (2 levels) in _app_views_search_results_show_course_html_erb___4038402232445226134_70146247608980'
+  app/views/search_results/show_course.html.erb:20:in `block in _app_views_search_results_show_course_html_erb___4038402232445226134_70146247608980'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:46:in `each'
+  app/views/search_results/show_course.html.erb:16:in `_app_views_search_results_show_course_html_erb___4038402232445226134_70146247608980'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/template.rb:145:in `block in render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:166:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/template.rb:333:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/template.rb:143:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:14:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/renderer.rb:23:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:100:in `_render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:83:in `render_to_body'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/rendering.rb:25:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:16:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:117:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:137:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:30:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:195:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:236:in `block in action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:42:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:802:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/etag.rb:24:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/conditionalget.rb:25:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/head.rb:13:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/query_cache.rb:36:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/migration.rb:378:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/222ed03f0f4df11f/variables" for ::1 at 2015-04-21 17:48:57 -0700
+
+
+Started POST "/__better_errors/222ed03f0f4df11f/eval" for ::1 at 2015-04-21 17:49:07 -0700
+
+
+Started POST "/__better_errors/222ed03f0f4df11f/eval" for ::1 at 2015-04-21 17:49:27 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 17:52:25 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+  [1m[36mDocument Load (0.3ms)[0m  [1mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered search_results/show_course.html.erb within layouts/application (27.9ms)
+Completed 500 Internal Server Error in 36ms
+
+NoMethodError - undefined method `length' for #<Document:0x007f986a460a78>:
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activemodel-4.2.0/lib/active_model/attribute_methods.rb:433:in `method_missing'
+  app/models/course.rb:19:in `block in search_test_id'
+  app/models/course.rb:17:in `search_test_id'
+  app/views/search_results/show_course.html.erb:20:in `block in _app_views_search_results_show_course_html_erb___4038402232445226134_70146247608980'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/relation/delegation.rb:46:in `each'
+  app/views/search_results/show_course.html.erb:16:in `_app_views_search_results_show_course_html_erb___4038402232445226134_70146247608980'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/template.rb:145:in `block in render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:166:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/template.rb:333:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/template.rb:143:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/template_renderer.rb:14:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/renderer/renderer.rb:23:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:100:in `_render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:83:in `render_to_body'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/rendering.rb:25:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:16:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:117:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:137:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:30:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:195:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:236:in `block in action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:42:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:802:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/etag.rb:24:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/conditionalget.rb:25:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/head.rb:13:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/query_cache.rb:36:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/migration.rb:378:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/3916fce74e6e73e1/variables" for ::1 at 2015-04-21 17:52:26 -0700
+
+
+Started POST "/__better_errors/3916fce74e6e73e1/eval" for ::1 at 2015-04-21 17:52:33 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 17:52:57 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered search_results/show_course.html.erb within layouts/application (7.6ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.5ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 17:52:57 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 17:52:57 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 17:52:57 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 17:52:57 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 17:52:57 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 17:52:57 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 17:52:57 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 17:52:57 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 17:52:57 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 17:59:32 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered search_results/show_course.html.erb within layouts/application (0.8ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.8ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 17:59:33 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 17:59:33 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 17:59:33 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 17:59:33 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 17:59:33 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 17:59:33 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 17:59:33 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 17:59:33 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 17:59:33 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:00:59 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered search_results/show_course.html.erb within layouts/application (0.8ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:00:59 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:00:59 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:00:59 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:00:59 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:00:59 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:00:59 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:00:59 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:00:59 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:00:59 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:01:07 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered search_results/show_course.html.erb within layouts/application (0.8ms)
+  Rendered shared/_search_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (4.7ms)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:01:24 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+  [1m[36mDocument Load (0.2ms)[0m  [1mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered search_results/show_course.html.erb within layouts/application (15.1ms)
+  Rendered shared/_search_bar.html.erb (0.7ms)
+  Rendered shared/_header.html.erb (5.5ms)
+Completed 200 OK in 99ms (Views: 87.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:01:24 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:01:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:01:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:01:24 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:01:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:01:24 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:01:24 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:01:24 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:01:24 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:02:15 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered search_results/show_course.html.erb within layouts/application (0.8ms)
+  Rendered shared/_search_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.9ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:02:15 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:02:15 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:02:15 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:02:15 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:02:15 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:02:15 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:02:15 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:02:15 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:02:15 -0700
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:02:19 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:02:19 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:02:19 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:02:20 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+  [1m[36mDocument Load (0.1ms)[0m  [1mSELECT  "documents".* FROM "documents" WHERE "documents"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered search_results/show_course.html.erb within layouts/application (0.8ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 42ms (Views: 41.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:02:21 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:02:21 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:02:21 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:02:21 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:02:21 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:02:21 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:02:21 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:02:21 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:02:21 -0700
+
+
+Started GET "/" for ::1 at 2015-04-21 18:03:38 -0700
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (1.9ms)
+  Rendered shared/_search_bar.html.erb (0.5ms)
+  Rendered shared/_header.html.erb (2.6ms)
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for ::1 at 2015-04-21 18:03:45 -0700
+Processing by SearchResultsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IBJ8CsLh0tVr6ySlweUewa/raXglWiuGlgToFnVg5T8MSw/DnKD5RC3k4y+R3n4IyazeEPRiV7Hf4in/YZZfqg==", "dpm_name"=>"Computer Science", "course_name"=>""}
+Redirected to http://localhost:3000/Computer%20Science
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/Computer%20Science" for ::1 at 2015-04-21 18:03:45 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"Computer Science"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "courses" WHERE (department LIKE 'Computer Science')
+  [1m[36m (0.1ms)[0m  [1mSELECT DISTINCT "courses"."course_id" FROM "courses" WHERE (department LIKE 'Computer Science')[0m
+  Rendered search_results/show_department.html.erb within layouts/application (0.8ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:03:45 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:03:45 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:03:45 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:03:45 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:03:45 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:03:45 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:03:45 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:03:45 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:03:45 -0700
+
+
+Started GET "/Computer%20Science" for ::1 at 2015-04-21 18:05:24 -0700
+Processing by SearchResultsController#show_department as HTML
+  Parameters: {"dpm"=>"Computer Science"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "courses" WHERE (department LIKE 'Computer Science')
+  [1m[36m (0.1ms)[0m  [1mSELECT DISTINCT "courses"."course_id" FROM "courses" WHERE (department LIKE 'Computer Science')[0m
+  Rendered search_results/show_department.html.erb within layouts/application (0.5ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.6ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:05:24 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:05:24 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:05:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:05:24 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:05:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:05:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:05:24 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:05:24 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:05:24 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:05:25 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  Rendered search_results/show_course.html.erb within layouts/application (0.3ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (2.0ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:06:20 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  Rendered search_results/show_course.html.erb within layouts/application (0.3ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.6ms)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:06:20 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:06:20 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:06:20 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:06:20 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:06:20 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:06:20 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:06:20 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:06:20 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:06:20 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:07:49 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  Rendered search_results/show_course.html.erb within layouts/application (0.4ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:07:49 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:07:49 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:07:49 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:07:49 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:07:49 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:07:49 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:07:49 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:07:49 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:07:49 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:08:57 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  Rendered search_results/show_course.html.erb within layouts/application (0.3ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.9ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:08:57 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:08:57 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:08:57 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:08:57 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:08:57 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:08:57 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:08:57 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:08:57 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:08:57 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:09:54 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  Rendered search_results/show_course.html.erb within layouts/application (0.3ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 45ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:09:54 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:09:54 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:09:54 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:09:54 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:09:54 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:09:54 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:09:54 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:09:54 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:09:54 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:10:24 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  Rendered search_results/show_course.html.erb within layouts/application (0.3ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 46ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:10:24 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:10:24 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:10:24 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:10:24 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:10:24 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:10:24 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:10:24 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:10:24 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:10:24 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:11:07 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  Rendered search_results/show_course.html.erb within layouts/application (0.3ms)
+  Rendered shared/_search_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.6ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:11:08 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:11:08 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:11:08 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:11:08 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:11:08 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:11:08 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:11:08 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:11:08 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:11:08 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:13:02 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  Rendered search_results/show_course.html.erb within layouts/application (0.3ms)
+  Rendered shared/_search_bar.html.erb (0.4ms)
+  Rendered shared/_header.html.erb (1.8ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:13:02 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:13:02 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:13:02 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:13:02 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:13:02 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:13:02 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:13:02 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:13:02 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:13:02 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:14:50 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  Rendered search_results/show_course.html.erb within layouts/application (0.3ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.6ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:14:50 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:14:50 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:14:50 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:14:50 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:14:50 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:14:50 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:14:50 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:14:50 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:14:50 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:15:05 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  Rendered search_results/show_course.html.erb within layouts/application (0.3ms)
+  Rendered shared/_search_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (2.2ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:15:05 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:15:05 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:15:05 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:15:05 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:15:05 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:15:05 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:15:05 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:15:05 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:15:05 -0700
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 18:18:17 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+Completed 500 Internal Server Error in 3ms
+
+RuntimeError - :
+  app/controllers/search_results_controller.rb:31:in `show_course'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:117:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:137:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:30:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:195:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:236:in `block in action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:42:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:802:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/etag.rb:24:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/conditionalget.rb:25:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/head.rb:13:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/query_cache.rb:36:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/migration.rb:378:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/f303292222a0a027/variables" for ::1 at 2015-04-21 18:18:17 -0700
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+
+
+Started POST "/__better_errors/f303292222a0a027/eval" for ::1 at 2015-04-21 18:18:25 -0700
+
+
+Started POST "/__better_errors/f303292222a0a027/eval" for ::1 at 2015-04-21 18:18:34 -0700
+
+
+Started GET "/" for ::1 at 2015-04-21 18:54:54 -0700
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (1.6ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.5ms)
+Completed 200 OK in 51ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:54:55 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:54:55 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:54:55 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:54:55 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:54:55 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:54:55 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:54:55 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:54:55 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:54:55 -0700
+
+
+Started GET "/user/sign_up" for ::1 at 2015-04-21 18:55:00 -0700
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid - Could not find table 'users':
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:517:in `table_structure'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:389:in `columns'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/schema_cache.rb:43:in `columns'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/attributes.rb:91:in `columns'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/attributes.rb:96:in `columns_hash'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/inheritance.rb:205:in `subclass_from_attributes?'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/inheritance.rb:54:in `new'
+  devise (3.4.1) lib/devise/models/registerable.rb:20:in `new_with_session'
+  devise (3.4.1) app/controllers/devise/registrations_controller.rb:105:in `build_resource'
+  devise (3.4.1) app/controllers/devise/registrations_controller.rb:7:in `new'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:117:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:137:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:30:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:195:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:236:in `block in action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:42:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:49:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:802:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/etag.rb:24:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/conditionalget.rb:25:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/head.rb:13:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/query_cache.rb:36:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/migration.rb:378:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started GET "/user/sign_up" for ::1 at 2015-04-21 18:55:00 -0700
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid - Could not find table 'users':
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:517:in `table_structure'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/sqlite3_adapter.rb:389:in `columns'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/schema_cache.rb:43:in `columns'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/attributes.rb:91:in `columns'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/attributes.rb:96:in `columns_hash'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/inheritance.rb:205:in `subclass_from_attributes?'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/inheritance.rb:54:in `new'
+  devise (3.4.1) lib/devise/models/registerable.rb:20:in `new_with_session'
+  devise (3.4.1) app/controllers/devise/registrations_controller.rb:105:in `build_resource'
+  devise (3.4.1) app/controllers/devise/registrations_controller.rb:7:in `new'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:117:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:137:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:30:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:195:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:236:in `block in action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:42:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/mapper.rb:49:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:802:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/etag.rb:24:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/conditionalget.rb:25:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/head.rb:13:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/query_cache.rb:36:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/migration.rb:378:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/2ed75daf0f3c28f3/variables" for ::1 at 2015-04-21 18:55:00 -0700
+
+
+Started GET "/" for ::1 at 2015-04-21 18:55:03 -0700
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.5ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 18:55:03 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 18:55:03 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 18:55:03 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 18:55:03 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 18:55:03 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 18:55:03 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:55:03 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 18:55:03 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 18:55:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseCoumnsToUser (20150422015819)
+  [1m[35m (0.0ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamp` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/irene/Desktop/CS188/Gattlestar-Balactica/db/migrate/20150422015819_add_devise_coumns_to_user.rb:34)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150422015819"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2015-04-21 19:00:31 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#index as HTML
+  Rendered homepage/index.html.erb within layouts/application (2.0ms)
+  Rendered shared/_search_bar.html.erb (0.2ms)
+  Rendered shared/_header.html.erb (1.5ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 19:00:31 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 19:00:31 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 19:00:31 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 19:00:31 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 19:00:31 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 19:00:31 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 19:00:31 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 19:00:31 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 19:00:31 -0700
+
+
+Started GET "/user/sign_up" for ::1 at 2015-04-21 19:00:33 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (23.2ms)
+  Rendered shared/_search_bar.html.erb (0.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+Completed 200 OK in 93ms (Views: 83.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 19:00:42 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+Completed 500 Internal Server Error in 2ms
+
+RuntimeError - :
+  app/controllers/search_results_controller.rb:31:in `show_course'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:117:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:137:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:30:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:195:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:236:in `block in action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:42:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:802:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/etag.rb:24:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/conditionalget.rb:25:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/head.rb:13:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/query_cache.rb:36:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/migration.rb:378:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 19:00:42 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError - :
+  app/controllers/search_results_controller.rb:31:in `show_course'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:198:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:117:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:234:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:169:in `block in halting'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:92:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `block in instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/notifications.rb:164:in `instrument'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/abstract_controller/base.rb:137:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionview-4.2.0/lib/action_view/rendering.rb:30:in `process'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:195:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_controller/metal.rb:236:in `block in action'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:42:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/journey/router.rb:30:in `serve'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/routing/route_set.rb:802:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/etag.rb:24:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/conditionalget.rb:25:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/head.rb:13:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/flash.rb:260:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/session/abstract/id.rb:220:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/cookies.rb:560:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/query_cache.rb:36:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activerecord-4.2.0/lib/active_record/migration.rb:378:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:88:in `_run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:38:in `call_app'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `block in call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/tagged_logging.rb:68:in `tagged'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/rack/logger.rb:20:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/methodoverride.rb:22:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/runtime.rb:18:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/activesupport-4.2.0/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/static.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/sendfile.rb:113:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/engine.rb:518:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/application.rb:164:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/lock.rb:17:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/content_length.rb:15:in `call'
+   () Users/irene/.rvm/gems/ruby-2.2.0@global/gems/rack-1.6.0/lib/rack/handler/webrick.rb:89:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/irene/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/5edd86a09f9704e0/variables" for ::1 at 2015-04-21 19:00:42 -0700
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."department" = ? AND "courses"."course_id" = ?  [["department", "Computer Science"], ["course_id", "31"]]
+
+
+Started GET "/Computer%20Science/31" for ::1 at 2015-04-21 19:00:49 -0700
+Processing by SearchResultsController#show_course as HTML
+  Parameters: {"dpm"=>"Computer Science", "course"=>"31"}
+  Rendered search_results/show_course.html.erb within layouts/application (0.4ms)
+  Rendered shared/_search_bar.html.erb (0.6ms)
+  Rendered shared/_header.html.erb (1.9ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-5c2e27d582e98f905b048de8ffee4679.css?body=1" for ::1 at 2015-04-21 19:00:49 -0700
+
+
+Started GET "/assets/application-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-21 19:00:49 -0700
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-21 19:00:49 -0700
+
+
+Started GET "/assets/bootstrap.min-fbd3e611df5f383807dda7e35aa35c5d.css?body=1" for ::1 at 2015-04-21 19:00:49 -0700
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-21 19:00:49 -0700
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-21 19:00:49 -0700
+
+
+Started GET "/assets/search_results-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 19:00:49 -0700
+
+
+Started GET "/assets/application-d5dd9df895e734baa4e6c45e5b5415a9.js?body=1" for ::1 at 2015-04-21 19:00:50 -0700
+
+
+Started GET "/assets/homepage-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-21 19:00:50 -0700

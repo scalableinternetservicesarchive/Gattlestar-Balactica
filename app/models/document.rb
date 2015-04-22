@@ -1,6 +1,11 @@
 class Document < ActiveRecord::Base
 	def self.search_test(test_id)
-		Document.where(id: test_id)
+		begin
+			Document.find(test_id)
+		rescue
+			# if there is no test_id in the database
+			[]
+		end
 	end
 
 	def format_quarter_year

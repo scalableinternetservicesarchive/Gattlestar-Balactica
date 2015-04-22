@@ -15,11 +15,7 @@ class Course < ActiveRecord::Base
 		test_ids = test_id.split(',')
 		test_documents = []
 		test_ids.each do |test_id|
-			result = Document.search_test(test_id)
-			if result.length == 0
-				return []
-			end
-			test_documents << result
+			test_documents << Document.search_test(test_id)
 		end
 		test_documents
 	end
