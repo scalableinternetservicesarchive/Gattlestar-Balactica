@@ -1,4 +1,15 @@
 class SearchResultsController < ApplicationController
+	def typeahead_department
+		q = params[:query]
+		puts render json: Course.select(:department).distinct.where('department LIKE ?', "#{q}%")
+	end
+
+	def typeahead_course_id
+		q = params[:query]
+		puts render json: Course.select(:course_id).distinct.where('course_id LIKE ?', "#{q}%")
+	end
+
+
 	def search
 		@department = params[:dpm_name]
 		if @department == nil || @department.empty?
