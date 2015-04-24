@@ -5,13 +5,10 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql2
-  encoding: utf8
+  adapter: sqlite3
+  database: db/default.sqlite3
   pool: 5
   timeout: 5000
-  username: root
-  host: localhost
-  #socket: /tmp/mysql.sock # breaks on linux
 
 development:
   <<: *default

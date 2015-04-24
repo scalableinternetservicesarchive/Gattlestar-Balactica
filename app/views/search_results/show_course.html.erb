@@ -1,1 +1,35 @@
-show course
+<div class="container">
+	<div class="panel panel-default">
+	  <div class="panel-body">
+	    <h2><%= @department %></h2>
+	  </div>
+	</div>
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-sm-3">Professor</div>
+				<div class="col-sm-3">Quarter and Year</div>
+				<div class="col-sm-6">Documents</div>
+			</div>
+		</div>
+		<% @query_results.each do |result| %>
+			<% unless result.nil? %>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-sm-3"><%= result.format_name %></div>
+						<div class="col-sm-9">
+							<% result.search_test_id.each do |document| %>
+								<div class="row">
+									<div class="col-sm-4"><%= document.format_quarter_year %></div>
+									<div class="col-sm-8"><%= document.display_test %></div>
+								</div>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+	</div>
+
+</div>

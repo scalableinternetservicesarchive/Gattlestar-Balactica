@@ -1,4 +1,15 @@
 class SearchResultsController < ApplicationController
+	def typeahead_department
+		q = params[:query]
+		puts render json: Course.select(:department).distinct.where('department LIKE ?', "#{q}%")
+	end
+
+	def typeahead_course_id
+		q = params[:query]
+		puts render json: Course.select(:course_id).distinct.where('course_id LIKE ?', "#{q}%")
+	end
+
+
 	def search
 		@department = params[:dpm_name]
 		if @department == nil || @department.empty?
@@ -20,8 +31,13 @@ class SearchResultsController < ApplicationController
         if @all_courses == nil || @all_courses.empty?
           return redirect_to root_path, flash: {error: 'There are no courses that have this department!'}
         end
+
+		@course_ids = @all_courses.uniq.pluck(:course_id)
 	end
 
 	def show_course
+		@department = params[:dpm].titleize
+		@course_id = params[:course]
+		@query_results = Course.search_by_course(@department, @course_id)
 	end
 end

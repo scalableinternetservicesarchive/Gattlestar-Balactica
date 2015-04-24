@@ -11,9 +11,15 @@ Rails.application.routes.draw do
   get 'about',     to: 'homepage#about',   as: 'about'
   get 'contact',   to: 'homepage#contact', as: 'contact'
 
+  get '/typeahead_department/:query' => 'search_results#typeahead_department'
+  get '/typeahead_course_id/:query' => 'search_results#typeahead_course_id'
+
+
   post 'search',       to: 'search_results#search', as: 'search'
   get ':dpm',         to: 'search_results#show_department', as: 'search_dpm'
   get ':dpm/:course', to: 'search_results#show_course',    as: 'search_course'
+
+ 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
