@@ -26,13 +26,26 @@ $(document).ready(function(){
 
   // instantiate the typeahead UI
 
-  $('#dpm_name').typeahead(null, {
-    name: 'department',
-    displayKey: 'department',
-    source: bloodhound_dep.ttAdapter()
-  });
+  $('#dpm_name').typeahead(
+    {
+      hint: true,
+      highlight: true,
+      minLength: 1
+    },
+    {
+      name: 'department',
+      displayKey: 'department',
+      source: bloodhound_dep.ttAdapter()
+    }
+  );
 
-  $('#course_name').typeahead(null, {
+  $('#course_name').typeahead(
+    {
+      hint: true,
+      highlight: true,
+      minLength: 1
+    }, 
+    {
     name: 'course_name',
     displayKey: 'course_id',
     source: bloodhound_course_id.ttAdapter()
