@@ -1,0 +1,17 @@
+// Place all the styles related to the Homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.ucla_bg{
+	background: url('ucla_royce.jpg') no-repeat;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 40px;
+}
+
+.navbar_no_margin{
+	margin-bottom: 0;
+	border-width: 0 1px 1px 1px;
+}
