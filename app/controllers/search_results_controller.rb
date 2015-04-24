@@ -39,6 +39,5 @@ class SearchResultsController < ApplicationController
 		@department = params[:dpm].titleize
 		@course_id = params[:course]
 		@query_results = Course.search_by_course(@department, @course_id)
-		
 	end
 end

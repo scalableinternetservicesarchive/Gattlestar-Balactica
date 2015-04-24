@@ -3,6 +3,7 @@ class Course < ActiveRecord::Base
       	Course.where('department LIKE ?', dept)
 	end
 
+	# return ActiveRecords relation, not an array
 	def self.search_by_course(dept, course_id)
 		Course.where(department: dept, course_id: course_id)
 	end

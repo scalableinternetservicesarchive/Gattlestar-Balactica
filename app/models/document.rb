@@ -1,5 +1,4 @@
 class Document < ActiveRecord::Base
-	ROOTPATH = '~/Desktop'
 
 	def self.search_test(test_id)
 		begin
@@ -15,7 +14,6 @@ class Document < ActiveRecord::Base
 	end
 
 	def display_test
-		@file_path = ROOTPATH + path
-		# File.open(@file_path)
+		
 	end
 end
