@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20150420183953) do
+=======
 ActiveRecord::Schema.define(version: 20150422015819) do
+>>>>>>> e88c9696694db925f33bca8a0bb5d36dc6537c0d
 
   create_table "courses", force: :cascade do |t|
     t.string   "department"
@@ -25,12 +29,21 @@ ActiveRecord::Schema.define(version: 20150422015819) do
   end
 
   create_table "documents", force: :cascade do |t|
+<<<<<<< HEAD
+    t.string   "path",         limit: 255
+    t.string   "uploader_id",  limit: 255
+    t.string   "doc_type",     limit: 255
+    t.string   "quarter_year", limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+=======
     t.string   "path"
     t.string   "uploader_id"
     t.string   "doc_type"
     t.string   "quarter_year"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+>>>>>>> e88c9696694db925f33bca8a0bb5d36dc6537c0d
   end
 
   create_table "users", force: :cascade do |t|
