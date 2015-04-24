@@ -1,4 +1,5 @@
 class Document < ActiveRecord::Base
+  mount_uploader :document, DocumentUploader
 
 	def self.search_test(test_id)
 		begin

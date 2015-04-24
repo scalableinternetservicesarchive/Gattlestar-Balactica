@@ -1,0 +1,9 @@
+<h1>Upload#index</h1>
+<p>Find me in app/views/upload/index.html.erb</p>
+
+<%= form_for @doc, url: upload_upload_path, method: :post do |f| %>
+  <%= f.text_field :doc_type %>
+  <%= f.text_field :quarter_year %>
+  <%= f.file_field :document %>
+  <%= f.submit %>
+<% end %>

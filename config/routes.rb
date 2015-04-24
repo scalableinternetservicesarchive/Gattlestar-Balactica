@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'upload/index'
+
+  post 'upload/upload'
+
   devise_for :user do
     get 'signin' => 'devise/sessions#new', as: 'new_user_session'
     post 'signin' => 'devise/sessions#create', as: 'user_session'
@@ -19,7 +23,6 @@ Rails.application.routes.draw do
   get ':dpm',         to: 'search_results#show_department', as: 'search_dpm'
   get ':dpm/:course', to: 'search_results#show_course',    as: 'search_course'
 
- 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
