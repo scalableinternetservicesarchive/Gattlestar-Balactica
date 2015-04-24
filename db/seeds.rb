@@ -5,11 +5,10 @@
 # COMMENT OUT THE COMMAND ONCE YOU ARE DONE PLEASE
 #
 
-# Document.create([{path: '/CS31/COM_SCI_32_Smallberg_2007_Winter_MT'}, {uploader_id: "1"}, {doc_type: "Test"}, {quarter_year: '2010_Fall'}])
-# Course.create(department: 'Computer Science', course_id: '31', professor_last_name: 'Smallberg', professor_first_name: 'David', test_id: '4')
-# Course.create(department: 'Computer Science', course_id: '32', professor_last_name: 'Nachenberg', professor_first_name: 'Carey', test_id: '5')
-# Course.create(department: 'Computer Science', course_id: '32', professor_last_name: 'Smallberg', professor_first_name: 'David', test_id: '6')
-# Course.create([{department: 'Computer Science', course_id: '33', professor_last_name: 'Reinman', professor_first_name: 'Glen', test_id: '1,2'}, {department: 'Computer Science', course_id: '33', professor_last_name: 'Rohr', professor_first_name: 'John', test_id: '3'}]) 
+# Course.create(department: 'Computer Science', course_id: '31', professor_last_name: 'Smallberg', professor_first_name: 'David', test_id: '1')
+# Course.create(department: 'Computer Science', course_id: '32', professor_last_name: 'Nachenberg', professor_first_name: 'Carey', test_id: '2')
+# Course.create(department: 'Computer Science', course_id: '32', professor_last_name: 'Smallberg', professor_first_name: 'David', test_id: '3')
+# Course.create([{department: 'Computer Science', course_id: '33', professor_last_name: 'Reinman', professor_first_name: 'Glen', test_id: '4,5'}, {department: 'Computer Science', course_id: '33', professor_last_name: 'Rohr', professor_first_name: 'John', test_id: '6'}]) 
 
 # Course.create(department: 'Computer Science and Biology', course_id: 'MLG', 
 #              professor_last_name: 'Shrek', professor_first_name: 'Spoderman', test_id: '7')
