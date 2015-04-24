@@ -4,8 +4,13 @@ class UploadController < ApplicationController
   end
 
   def upload
-    @doc = Document.new(document_params)
-    if @doc.save 
+    if user_signed_in?
+      @doc = Document.new(document_params)
+      @doc.uploader_id = current_user.id
+      if @doc.save 
+      else
+        return redirect_to root_path, flash: {alert: 'Error occured when uploading document'}
+      end
     else
       return redirect_to root_path, flash: {alert: 'You have to be logged in to upload documents!'}
     end
