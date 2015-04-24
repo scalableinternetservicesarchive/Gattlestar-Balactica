@@ -20,4 +20,18 @@ class Course < ActiveRecord::Base
 		end
 		test_documents
 	end
+
+	def self.find_all_department
+		Course.uniq.pluck(:department)
+	end
+
+	def self.find_all_courses
+		departments = find_all_department
+		course_hash = {}
+		departments.each do |dept|
+			courses = search_by_dept(dept)
+			course_hash[dept] = courses.uniq.pluck(:course_id)
+		end
+		course_hash
+	end
 end

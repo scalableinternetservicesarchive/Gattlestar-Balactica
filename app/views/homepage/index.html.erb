@@ -27,14 +27,12 @@
       </tr>
     </thead>
     <tbody>
-      <% @department.each do |course, course_ids| %>
+      <% @course_hash.each do |dept, course_ids| %>
         <tr>
-          <td><%= course %></td>
+          <td><%= dept %></td>
           <td>
             <% course_ids.each do |course_id| %>
-              <%= link_to search_course_path(dpm: course, course: course_id) do %>
-                <%= course_id %>
-              <% end %>
+              <%= link_to course_id ,search_course_path(dpm: dept, course: course_id) %>
               <% unless course_id == course_ids.last %>&nbsp;<% end %>
             <% end %>
           </td>
