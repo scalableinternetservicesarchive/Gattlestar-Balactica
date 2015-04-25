@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get ':dpm',         to: 'search_results#show_department', as: 'search_dpm'
   get ':dpm/:course', to: 'search_results#show_course',    as: 'search_course'
 
-  get ':dpm/:course/:test_id', to: 'department#index', as: 'document'
+  get ':dpm/:course/:test_id', to: 'document#index', as: 'document'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

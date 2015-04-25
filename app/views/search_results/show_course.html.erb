@@ -24,7 +24,7 @@
 									<% result.search_test_id.each do |document| %>
 										<div class="row">
 											<div class="col-sm-4"><%= document.format_quarter_year %></div>
-											<div class="col-sm-8"><% raise %></div>
+											<div class="col-sm-8"><%= link_to 'Link to Document', document_path(params[:dpm], params[:course], document.id) %></div>
 										</div>
 									<% end %>
 								</div>
