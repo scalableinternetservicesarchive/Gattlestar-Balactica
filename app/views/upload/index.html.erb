@@ -1,9 +1,28 @@
-<h1>Upload#index</h1>
-<p>Find me in app/views/upload/index.html.erb</p>
+<div class="container">
+  <%= form_for @doc, url: upload_upload_path, method: :post, html: {class: "form-horizontal"} do |f| %>
+    <legend>Upload document</legend>
+    <div class="field form-group">
+      <%= f.label :doc_type, "Document Type:", class: "col-lg-1 control-label" %>
+      <span class="col-lg-10">
+        <%= f.text_field :doc_type, class: "form-control" %>
+      </span>
+    </div>
+    <div class="field form-group">
+      <%= f.label :quarter_year, "Quarter Year:", class: "col-lg-1 control-label" %>
+      <span class="col-lg-10">
+        <%= f.text_field :quarter_year, class: "form-control" %>
+      </span>
+    </div>
+    <div class="field form-group">
+      <span class="col-lg-10 col-lg-offset-1">
+        <%= f.file_field :document %>
+      </span>
+    </div>
 
-<%= form_for @doc, url: upload_upload_path, method: :post do |f| %>
-  <%= f.text_field :doc_type %>
-  <%= f.text_field :quarter_year %>
-  <%= f.file_field :document %>
-  <%= f.submit %>
-<% end %>
+    <div class="actions form-group">
+      <div class="col-lg-10 col-lg-offset-1">
+        <%= f.submit "Upload Document", class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>
