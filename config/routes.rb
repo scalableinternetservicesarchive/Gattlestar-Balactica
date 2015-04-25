@@ -18,10 +18,11 @@ Rails.application.routes.draw do
   get '/typeahead_department/:query' => 'search_results#typeahead_department'
   get '/typeahead_course_id/:query' => 'search_results#typeahead_course_id'
 
-
   post 'search',       to: 'search_results#search', as: 'search'
   get ':dpm',         to: 'search_results#show_department', as: 'search_dpm'
   get ':dpm/:course', to: 'search_results#show_course',    as: 'search_course'
+
+  get ':dpm/:course/:test_id', to: 'department#index', as: 'document'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
