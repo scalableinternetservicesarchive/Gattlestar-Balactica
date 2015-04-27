@@ -8,6 +8,7 @@ class UploadController < ApplicationController
       @doc = Document.new(document_params)
       @doc.uploader_id = current_user.id
       if @doc.save 
+        return redirect_to documents_index_path
       else
         return redirect_to root_path, flash: {alert: 'Error occured when uploading document'}
       end
@@ -17,6 +18,6 @@ class UploadController < ApplicationController
   end
 
   def document_params
-    params.require(:document).permit(:doc_type, :quarter_year, :document)
+    params.require(:document).permit(:doc_type, :quarter_year, :document, :description)
   end
 end

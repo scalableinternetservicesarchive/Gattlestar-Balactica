@@ -1,0 +1,6 @@
+<h1>My documents uploaded</h1>
+
+<% @my_documents.each do |document| %>
+  <p><b><%= document.description %></b></p>
+  <p><%= document.document.current_path %></p>
+<% end %>

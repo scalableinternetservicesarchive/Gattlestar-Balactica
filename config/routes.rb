@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'documents/index'
+
   get 'upload/index'
 
   post 'upload/upload'
