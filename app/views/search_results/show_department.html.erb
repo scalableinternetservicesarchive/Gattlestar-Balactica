@@ -1,20 +1,17 @@
 <div class="container">
-	<div class="panel panel-default">
-	  <div class="panel-body">
-	    <h2><%= @department %></h2>
-	  </div>
-	</div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2><%= @department %></h2>
+    </div>
+  </div>
 
-	<% @course_ids.each_with_index do |course, index| %>
-		<% if index % 3 == 0 %>
-			<div class="btn-group btn-group-justified">
-		<% end %>
-			<%= link_to "#{course}", search_course_path(dpm: @department, course: course), class: 'btn btn-default' %>
-			<% if index % 3 == 2 %>
-				</div>
-			<% end %>
-	<% end %> 
-
-
-	
+  <% @course_ids.each_with_index do |course, index| %>
+    <% if index % 3 == 0 %>
+      <div class="btn-group btn-group-justified">
+      <% end %>
+      <%= link_to "#{course}", search_course_path(dpm: @department, course: course), class: 'btn btn-default' %>
+      <% if index % 3 == 2 %>
+      </div>
+    <% end %>
+  <% end %> 
 </div>

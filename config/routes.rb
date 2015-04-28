@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/typeahead_course_id/:query' => 'search_results#typeahead_course_id'
 
   post 'search',       to: 'search_results#search', as: 'search'
+  get 'courses/:course_id', to: 'search_results#show_specific_course', as: 'search_specific_course'
   get ':dpm',         to: 'search_results#show_department', as: 'search_dpm'
   get ':dpm/:course', to: 'search_results#show_course',    as: 'search_course'
 

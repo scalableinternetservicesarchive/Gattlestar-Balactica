@@ -20,10 +20,6 @@ class Document < ActiveRecord::Base
     end
   end
 
-  def format_quarter_year
-    quarter_year.sub(/\_/,' ')
-  end
-
   def display_test
 
   end

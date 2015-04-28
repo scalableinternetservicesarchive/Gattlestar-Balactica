@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2><%= @course.department %> <%= @course.course_id %></h2>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-sm-3">Description</div>
+        <div class="col-sm-3">Quarter</div>
+        <div class="col-sm-3">Year</div>
+        <div class="col-sm-3">File Type</div>
+      </div>
+    </div>
+
+    <% if !@documents.empty? %>
+      <% @documents.each do |document| %>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-sm-3"><%= document.description %></div>
+            <div class="col-sm-3"><%= document.quarter %></div>
+            <div class="col-sm-3"><%= document.year %></div>
+            <div class="col-sm-3"><%= document.document.file.extension.downcase %></div>
+          </div>
+        </li>
+      <% end %>
+    <% end %>
+  </div>
+</div>

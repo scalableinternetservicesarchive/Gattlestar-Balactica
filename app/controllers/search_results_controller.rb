@@ -40,4 +40,10 @@ class SearchResultsController < ApplicationController
     @course_id = params[:course]
     @query_results = Course.search_by_course(@department, @course_id)
   end
+
+  def show_specific_course
+    @specific_course_id = params[:course_id]
+    @course = Course.find(@specific_course_id)
+    @documents = Document.where(course_id: @specific_course_id)
+  end
 end
