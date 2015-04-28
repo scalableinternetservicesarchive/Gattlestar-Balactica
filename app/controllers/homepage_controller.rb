@@ -1,19 +1,19 @@
 class HomepageController < ApplicationController
-	DEPARTMENTS = YAML.load_file('config/major_abr.yml')
+  DEPARTMENTS = YAML.load_file('config/major_abr.yml')
 
-	def index 
-		@department = DEPARTMENTS
-	end
+  def index 
+    @department = DEPARTMENTS
+  end
 
-	def log_in
-	end
+  def log_in
+  end
 
-	def sign_up
-	end
+  def sign_up
+  end
 
-	def about
-	end
+  def about
+  end
 
-	def contact
-	end
+  def contact
+  end
 end

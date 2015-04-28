@@ -1,5 +1,5 @@
 <div class="container">
-  <%= form_for @doc, url: upload_upload_path, method: :post, html: {class: "form-horizontal"} do |f| %>
+  <%= form_for @doc, url: documents_path, method: :post, html: {class: "form-horizontal"} do |f| %>
     <legend>Upload document</legend>
     <div class="field form-group">
       <%= f.label :doc_type, "Document Type:", class: "col-lg-1 control-label" %>
