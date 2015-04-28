@@ -19,7 +19,7 @@
       <% @documents.each do |document| %>
         <li class="list-group-item">
           <div class="row">
-            <div class="col-sm-3"><%= document.description %></div>
+            <div class="col-sm-3"><a href="<%= document.document.url %>"><%= document.description %></a></div>
             <div class="col-sm-3"><%= document.quarter %></div>
             <div class="col-sm-3"><%= document.year %></div>
             <div class="col-sm-3"><%= document.document.file.extension.downcase %></div>
