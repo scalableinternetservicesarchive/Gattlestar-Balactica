@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150428072849) do
+ActiveRecord::Schema.define(version: 20150428204133) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "department"
@@ -26,11 +26,13 @@ ActiveRecord::Schema.define(version: 20150428072849) do
 
   create_table "documents", force: :cascade do |t|
     t.string   "uploader_id"
-    t.string   "quarter_year"
+    t.string   "quarter"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.string   "document"
-    t.text     "description",  default: "", null: false
+    t.text     "description", default: "",  null: false
+    t.string   "year",        default: "",  null: false
+    t.string   "course_id",   default: "1", null: false
   end
 
   create_table "users", force: :cascade do |t|

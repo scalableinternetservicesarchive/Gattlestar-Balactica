@@ -12,6 +12,11 @@ class DocumentsController < ApplicationController
       ['Spring', 'Spring'],
       ['Summer', 'Summer']
     ]
+
+    @years = []
+    (Time.now.year).downto(1960).each do |year|
+      @years.push([year, year])
+    end
     @doc = Document.new
   end
 
@@ -21,11 +26,14 @@ class DocumentsController < ApplicationController
     if @doc.save 
       return redirect_to documents_path
     else
+      if @doc.errors.any? 
+        puts @doc.errors.full_messages
+      end
       return redirect_to root_path, flash: {alert: 'Error occured when uploading document'}
     end
   end
 
   def document_params
-    params.require(:document).permit(:quarter_year, :document, :description)
+    params.require(:document).permit(:quarter, :year, :document, :description)
   end
 end

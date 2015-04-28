@@ -2,9 +2,15 @@
   <%= form_for @doc, url: documents_path, method: :post, html: {class: "form-horizontal"} do |f| %>
     <legend>Upload document</legend>
     <div class="field form-group">
-      <%= f.label :quarter_year, "Quarter Year:", class: "col-lg-1 control-label" %>
+      <%= f.label :quarter, "Quarter:", class: "col-lg-1 control-label" %>
       <span class="col-lg-10">
-        <%= f.select :quarter_year, options_for_select(@quarters), {}, { class: "form-control" } %>
+        <%= f.select :quarter, options_for_select(@quarters), {}, { class: "form-control" } %>
+      </span>
+    </div>
+    <div class="field form-group">
+      <%= f.label :year, "Year:", class: "col-lg-1 control-label" %>
+      <span class="col-lg-10">
+        <%= f.select :year, options_for_select(@years), {}, { class: "form-control" } %>
       </span>
     </div>
     <div class="field form-group">
