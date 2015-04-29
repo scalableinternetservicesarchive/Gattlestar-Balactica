@@ -7,12 +7,15 @@ Rails.application.routes.draw do
     get 'signup' => 'devise/registration#new', as: 'new_user_registration'
   end
 
-  resources :documents
+  get '/documents/:course_id/new', to: 'documents#new', as: 'new_document'
+  get '/documents', to: 'documents#index', as: 'documents'
+  post '/documents/:course_id/create', to: 'documents#create', as: 'create_document'
 
   root 'homepage#index'
 
   get 'about',     to: 'homepage#about',   as: 'about'
   get 'contact',   to: 'homepage#contact', as: 'contact'
+  get 'search_test', to: 'homepage#search_test', as: 'search_test'
 
   get '/typeahead_department/:query' => 'search_results#typeahead_department'
   get '/typeahead_course_id/:query' => 'search_results#typeahead_course_id'

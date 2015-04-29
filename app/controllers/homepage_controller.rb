@@ -16,4 +16,7 @@ class HomepageController < ApplicationController
 
   def contact
   end
+
+  def search_test
+  end
 end

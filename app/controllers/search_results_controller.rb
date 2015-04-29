@@ -13,7 +13,7 @@ class SearchResultsController < ApplicationController
   def search
     @department = params[:dpm_name]
     if @department == nil || @department.empty?
-      return redirect_to root_path, flash: {error: 'Please Enter A Valid Department Name'}
+      return redirect_to root_path, flash: {alert: 'Please Enter A Valid Department Name'}
     end
 
     @course = params[:course_name]
@@ -29,7 +29,7 @@ class SearchResultsController < ApplicationController
     @all_courses = Course.search_by_dept(@department)
 
     if @all_courses == nil || @all_courses.empty?
-      return redirect_to root_path, flash: {error: 'There are no courses that have this department!'}
+      return redirect_to root_path, flash: {alert: 'There are no courses that have this department!'}
     end
 
     @course_ids = @all_courses.uniq.pluck(:course_id)

@@ -5,6 +5,12 @@
     </div>
   </div>
 
+  <% if user_signed_in? %>
+    <div>
+      <%= link_to "Upload new document", new_document_path(course_id: @course.id), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
   <div class="panel panel-default">
     <div class="panel-heading">
       <div class="row">
