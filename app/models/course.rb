@@ -1,16 +1,16 @@
 class Course < ActiveRecord::Base
-	def self.search_by_dept(dept)
-      	Course.where('department LIKE ?', dept)
-	end
+  def self.search_by_dept(dept)
+    Course.where('department LIKE ?', dept)
+  end
 
-	# return ActiveRecords relation, not an array
-	def self.search_by_course(dept, course_id)
-		Course.where(department: dept, course_id: course_id)
-	end
+  # return ActiveRecords relation, not an array
+  def self.search_by_course(dept, course_id)
+    Course.where(department: dept, course_id: course_id)
+  end
 
-	def format_name
-		professor_first_name + " " + professor_last_name
-	end
+  def format_name
+    professor_first_name + " " + professor_last_name
+  end
 
 	def search_test_id
 		test_ids = test_id.split(',')

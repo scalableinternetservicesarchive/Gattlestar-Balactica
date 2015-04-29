@@ -1,0 +1,76 @@
+Name: Darin Minamoto
+UID: 704-140-102
+
+Exercise 1.1v
+2. / A S C I I Enter
+3. g g / I n s t r u c t i o n s Enter 
+4. g g / H T M L Enter
+5. g g / h u n t Enter
+6. $
+7. 0
+8. g g
+10. Search instead of moving the cursor around manually
+
+Exercise 1.2v
+2. : 1 6 Enter d d 
+3. / D E L E T E M E Enter d d 
+4. / < ! - - Enter d d d d d d
+5. / < ! - - Enter v l l l l l l x 
+
+Exercise 1.3v
+2. / A s s i g n m e n t SP 1 Enter 1 1 l r 3 a 5 Esc n 1 1 l r 3 a 5 Esc 
+3. ? U T F Enter v l l l l x i U S - A S C I I Esc
+4. / < o l Enter o Esc
+5. : w q
+
+Exercise 1.4v
+3. G ? < ! Enter v 6 l y ? s h o u l d Enter n 3 w h p
+4. G ? < ! Enter n v j j $ y : 2 3 4 Enter p j x j h x
+   G ? < ! Enter n n v $ y : 9 4 Enter p
+   G ? < ! Enter n n n v $ y : 1 6 Enter p
+5. G ? - - - Enter n v G $ x
+6. u
+7. i < ! - - SP Esc G  A SP - - > Esc ? < ! Enter v 6 l x n d w j j l d
+ w n
+ d w $ x x x n d w $ x x x
+8. : % s / < o l > / < O l > / g Enter
+
+Exercise 1.1e
+2. C-s A S C I I Enter
+3. M-< C-s I n s Enter
+4. M-< C-s H Enter C-b 
+5. M-< C-s h u Enter C-b C-b
+6. C-e
+7. C-a
+8. M-<
+10. Search instead of moving the cursor around.
+
+Exercise 1.2e
+2. M-g g 1 6 Enter C-k
+3. C-s D E L E T E M E C-Shift-Backspace
+4. C-s # C-s C-p C-Shift-Backspace C-Shift-Backspace C-Shift-Backspace
+5. C-s < ! - - - - > Enter Backspace Backspace Backspace Backspace Back
+space
+Backspace Backspace
+
+Exercise 1.3e
+2. C-s A s Enter M-f SP 3 5 Delete Delete C-s C-s Enter M-f SP 35 Delete
+Delete 
+3. M-< C-s U T Enter Backspace S - A S C I I Delete Delete Delete
+4. C-s < o Enter C-e Enter
+
+Exercise 1.4e
+3. M-> C-r < ! Enter C-F C-F C-F C-F C-F C-F C-F C-w C-y C-r s h o u l d 
+C-r M-f M-f M-f C-y 
+4. M-> C-r < ! C-r Enter C-N C-N C-E C-w C-y M-g g 2 3 4 Enter Enter
+C-y C-a Delete C-p Delete
+   M-> C-r < ! C-r C-r Enter C-E C-w C-y M-g g 9 4 Enter Enter C-y
+   M-> C-r < ! C-r C-r C-r Enter C-E C-w C-y M-g g 1 6 C-y
+5. M-> C-r - - - C-r Enter C-@ M-> C-w
+6. C-x u 
+7. C-r < ! Enter C-F C-F C-F C-F C-F C-F C-F C-w C-r C-r Enter Delete Delete
+Delete Delete C-n C-n C-f Delete Delete Delete C-r C-r Enter Delete 
+Delete Delete Delete C-e Backspace Backspace Backspace C-r C-r
+Delete Delete Delete Delete C-e Backspace Backspace Backspace C-r - - -
+Enter < ! - - SP M-> SP - - >
+8. M-< M-x r e p l a c e - s t r i n g Enter < o l > Enter < O l > Enter

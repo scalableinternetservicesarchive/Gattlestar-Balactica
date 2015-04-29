@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'upload/index'
-
-  post 'upload/upload'
 
   devise_for :user do
     get 'signin' => 'devise/sessions#new', as: 'new_user_session'
@@ -10,15 +7,21 @@ Rails.application.routes.draw do
     get 'signup' => 'devise/registration#new', as: 'new_user_registration'
   end
 
+  get '/documents/:course_id/new', to: 'documents#new', as: 'new_document'
+  get '/documents', to: 'documents#index', as: 'documents'
+  post '/documents/:course_id/create', to: 'documents#create', as: 'create_document'
+
   root 'homepage#index'
 
   get 'about',     to: 'homepage#about',   as: 'about'
   get 'contact',   to: 'homepage#contact', as: 'contact'
+  get 'search_test', to: 'homepage#search_test', as: 'search_test'
 
   get 'typeahead_department/:query' => 'search_results#typeahead_department'
   get 'typeahead_course_id/:query' => 'search_results#typeahead_course_id'
 
   post 'search',       to: 'search_results#search', as: 'search'
+  get 'courses/:course_id', to: 'search_results#show_specific_course', as: 'search_specific_course'
   get ':dpm',         to: 'search_results#show_department', as: 'search_dpm'
   get ':dpm/:course', to: 'search_results#show_course',    as: 'search_course'
 

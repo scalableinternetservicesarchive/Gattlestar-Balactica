@@ -1,37 +1,31 @@
 <div class="container">
-	<div class="panel panel-default">
-	  <div class="panel-body">
-	    <h2><%= @department %></h2>
-	  </div>
-	</div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2><%= @department %></h2>
+    </div>
+  </div>
 
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<div class="row">
-				<div class="col-sm-3">Professor</div>
-				<div class="col-sm-3">Quarter and Year</div>
-				<div class="col-sm-3">Documents</div>
-				<div class="col-sm-3">Rating</div>
-			</div>
-		</div>
-		<ul class="list-group">
-			<% @query_results.each do |result| %>
-				<% unless result.nil? %>
-						<li class="list-group-item">
-							<div class="row">
-								<div class="col-sm-3"><%= result.format_name %></div>
-								<div class="col-sm-9">
-									<% result.search_test_id.each do |document| %>
-										<div class="row">
-											<div class="col-sm-4"><%= document.format_quarter_year %></div>
-											<div class="col-sm-8"><%= link_to 'Link to Document', document_path(params[:dpm], params[:course], document.id) %></div>
-										</div>
-									<% end %>
-								</div>
-							</div>
-						</li>
-				<% end %>
-			<% end %>
-		</ul>
-	</div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-sm-6">Course</div>
+        <div class="col-sm-6">Professor</div>
+      </div>
+    </div>
+    <ul class="list-group">
+      <% @query_results.each do |result| %>
+        <% unless result.nil? %>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-sm-6"><%= link_to @department+' '+result.course_id, 
+                search_specific_course_path(course_id: result.id) %> </div>
+              <div class="col-sm-6"><%= result.format_name %></div>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
 </div>
+
+

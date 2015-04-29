@@ -1,0 +1,8 @@
+<h1>My documents uploaded</h1>
+
+<% @my_documents.each do |document| %>
+  <p><b>Quarter:</b> <%= document.quarter %></p>
+  <p><b>Year:</b> <%= document.year %></p>
+  <p><b>Description:</b> <%= document.description %></p>
+  <p><b>File path:</b> <%= document.document.current_path %></p>
+<% end %>
