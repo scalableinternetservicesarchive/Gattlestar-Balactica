@@ -14,7 +14,12 @@
   <h1 style="color: white; text-align: center;">Practice Makes Perfect...</h1>
   <h3 style="color: white; text-align: center;">Tests and homework from your fellow Bruins!</h3>
   <h3 style="color: white; text-align: center;">Trade Now!</h3>
-  <p style="text-align: center;"><a class="btn btn-default btn-lg">Start</a></p>
+  <% if user_signed_in? %>
+    <p style="text-align: center;"><%= link_to 'Start', search_test_path, class: "btn btn-default btn-lg" %></p>
+  <% else %>
+    <p style="text-align: center;"><%= link_to "Log in", new_user_session_path, class: "btn btn-success btn-lg" %></p>
+    <p style="text-align: center;"><%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+  <% end %>
 </div>
 
 <div class="container">
