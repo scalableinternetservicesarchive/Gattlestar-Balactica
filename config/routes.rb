@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'homepage#index'
+
   devise_for :user do
     get 'signin' => 'devise/sessions#new', as: 'new_user_session'
     post 'signin' => 'devise/sessions#create', as: 'user_session'
@@ -10,8 +12,6 @@ Rails.application.routes.draw do
   get '/documents/:course_id/new', to: 'documents#new', as: 'new_document'
   get '/documents', to: 'documents#index', as: 'documents'
   post '/documents/:course_id/create', to: 'documents#create', as: 'create_document'
-
-  root 'homepage#index'
 
   get 'about',     to: 'homepage#about',   as: 'about'
   get 'contact',   to: 'homepage#contact', as: 'contact'
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get ':dpm',         to: 'search_results#show_department', as: 'search_dpm'
   get ':dpm/:course', to: 'search_results#show_course',    as: 'search_course'
 
-  get ':dpm/:course/:test_id', to: 'document#index', as: 'document'
+  # get ':dpm/:course/:test_id', to: 'document#index', as: 'document'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
