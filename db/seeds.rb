@@ -12,6 +12,9 @@
 
  Course.create(department: 'Computer Science and Biology', course_id: 'MLG', 
               professor_last_name: 'Shrek', professor_first_name: 'Spoderman', test_id: '7')
+
+
+user = User.create! :email => 'admin@admin.com', :password => 'admin1234', :password_confirmation => 'admin1234', :first_name => 'admin', :last_name => 'admin', :courses_taken => 'Computer Science 31, Computer Science 32'
 # Document.create([{path: '/CS31/COM_SCI_31_Unknown_2010_Fall_MT.pdf', uploader_id: "1", doc_type: "Test", quarter_year: '2010_Fall'}, {path: '/CS32/COM_SCI_32_Nachenberg_2012_Winter_MT.pdf', uploader_id: "1", doc_type: "Test", quarter_year: '2012_Winter'}, {path: '/CS32/COM_SCI_32_Smallberg_2007_Winter_MT.pdf', uploader_id: "1", doc_type: "Test", quarter_year: '2007_Winter'}])
 # Document.create([{path: '/CS33/COM_SCI_33_Reinman_2009_Spring_MT.pdf', uploader_id: "1", doc_type: "Test", quarter_year: '2009_Spring'}, {path: '/CS33/COM_SCI_33_Reinman_2010_Spring_MT_1.pdf', uploader_id: "1", doc_type: "Test", quarter_year: '2010_Spring'}, {path: '/CS33/COM_SCI_33_Rohr_2008_Fall_MT.pdf', uploader_id: "1", doc_type: "Test", quarter_year: '2008_Fall'}])
 

@@ -1,0 +1,34 @@
+
+<div class=profile-header>
+	<h1>My Profile
+		<span>
+			<label class="user-profile-label">Credits Remaining: </label><label> <%= @user.credits %> </value>
+		</span>
+	</h1>
+</header>
+
+<div class=user-profile-basic-info>
+	<h4> Basic Information </h4>
+	<hr>
+	<ul style="list-style: none;">
+		<li>
+			<label class="user-profile-label">Email: </label><label class="user-profile-value"><%= @user.email %></value>
+		</li>	
+		<li>
+			<label class="user-profile-label">Full Name: </label><label class="user-profile-value"><%= @user.first_name %> <%= @user.last_name %></value>
+		</li>
+		<li>
+			<label class="user-profile-label">Graduation Date: </label><label class="user-profile-value"></value>
+		</li>
+	</ul>
+
+</div>
+
+<div class=courses-profile-info>
+	<h4> Courses Enrolled </h4>
+	<%= link_to '<button type="button">Add Course</button>'.html_safe, add_course_path %>
+	<hr>
+	<%= @courses_string %>
+</div>
+
+
