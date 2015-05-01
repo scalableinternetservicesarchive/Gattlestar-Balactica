@@ -5,6 +5,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @courses_string = @user.courses_taken.split(",")
 
+        @courses_string.each do |course|
+      course_id_start = course.rindex(' ')
+      @dpm_name = course.slice(0, course_id_start)
+      @course_id = course[course_id_start + 1..-1]
+    end
 
     respond_to do |format|
         format.html # show.html.erb

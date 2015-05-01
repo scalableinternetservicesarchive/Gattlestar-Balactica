@@ -38,6 +38,8 @@ class DocumentsController < ApplicationController
       @doc.uploader_id = current_user.id
       @doc.course_id = @course_id
       if @doc.save 
+        @credits = User.find(current_user.id).credits
+        current_user.update_attribute("credits", @credits + 1) 
         return redirect_to documents_path
       else
         if @doc.errors.any? 
