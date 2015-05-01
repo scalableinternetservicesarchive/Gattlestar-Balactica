@@ -1,8 +1,32 @@
-<h1>My documents uploaded</h1>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2>My documents uploaded</h2>
+    </div>
+  </div>
 
-<% @my_documents.each do |document| %>
-  <p><b>Quarter:</b> <%= document.quarter %></p>
-  <p><b>Year:</b> <%= document.year %></p>
-  <p><b>Description:</b> <%= document.description %></p>
-  <p><b>File path:</b> <%= document.document.current_path %></p>
-<% end %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-sm-2">Description</div>
+        <div class="col-sm-2">Class</div>
+        <div class="col-sm-2">Quarter</div>
+        <div class="col-sm-2">Year</div>
+        <div class="col-sm-2">Actions</div>
+      </div>
+    </div>
+
+    <% @my_documents.each_with_index do |document,index| %>
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-sm-2"><a href="<%= document.document.url %>"><%= document.description %></a></div>
+          <div class="col-sm-2"><%= @courses[index].department %> <%= @courses[index].course_id %></div>
+          <div class="col-sm-2"><%= document.quarter %></div>
+          <div class="col-sm-2"><%= document.year %></div>
+          <div class="col-sm-2"><%= link_to 'Delete', delete_document_path(document_id: document.id), 
+            method: :delete, class: "btn btn-primary" %></div>
+        </div>
+      </li>
+    <% end %>
+  </div>
+</div>

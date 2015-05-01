@@ -3,6 +3,10 @@ class DocumentsController < ApplicationController
 
   def index
     @my_documents = Document.where(uploader_id: current_user.id)
+    @courses = @my_documents.map do |document| 
+      Course.find(document.course_id)
+    end
+    puts @courses
   end
 
   def new
@@ -34,6 +38,8 @@ class DocumentsController < ApplicationController
       @doc.uploader_id = current_user.id
       @doc.course_id = @course_id
       if @doc.save 
+        @credits = User.find(current_user.id).credits
+        current_user.update_attribute("credits", @credits + 1) 
         return redirect_to documents_path
       else
         if @doc.errors.any? 
@@ -42,6 +48,11 @@ class DocumentsController < ApplicationController
         return redirect_to root_path, flash: {alert: 'Error occured when uploading document'}
       end
     end
+  end
+
+  def delete
+    Document.delete(params[:document_id])
+    redirect_to documents_path
   end
 
   def document_params

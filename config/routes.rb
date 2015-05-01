@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'homepage#index'
 
+  resources :users, :only => [:show]
+
   devise_for :user do
     get 'signin' => 'devise/sessions#new', as: 'new_user_session'
     post 'signin' => 'devise/sessions#create', as: 'user_session'
@@ -11,11 +13,15 @@ Rails.application.routes.draw do
 
   get '/documents/:course_id/new', to: 'documents#new', as: 'new_document'
   get '/documents', to: 'documents#index', as: 'documents'
+  delete '/documents/:document_id/delete', to: 'documents#delete', as: 'delete_document'
   post '/documents/:course_id/create', to: 'documents#create', as: 'create_document'
 
   get 'about',     to: 'homepage#about',   as: 'about'
   get 'contact',   to: 'homepage#contact', as: 'contact'
   get 'search_test', to: 'homepage#search_test', as: 'search_test'
+  get 'add_course', to: 'users#add_course'
+  post 'add_course_post', to: 'users#add_course_post', as: 'add_course_post'
+
 
   get 'typeahead_department/:query' => 'search_results#typeahead_department'
   get 'typeahead_course_id/:query' => 'search_results#typeahead_course_id'

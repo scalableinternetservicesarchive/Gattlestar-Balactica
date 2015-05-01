@@ -1,4 +1,4 @@
-<% if !user_signed_in? || (user_signed_in? && !current_page?(controller: "homepage", action: "search_test")) %>
+<% if !user_signed_in? || (user_signed_in? && !current_page?('/search_test')) %>
   <%= form_tag search_path, :class => "navbar-form navbar-right", :role => 'search' do %>
   	<div class="form-group">
   		<%= text_field_tag 'dpm_name', nil, placeholder: 'Department Name', class: 'form-control', autofocus: true %>
