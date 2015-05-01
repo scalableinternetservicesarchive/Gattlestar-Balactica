@@ -1,0 +1,78 @@
+M151B Homework 5
+Name: Darin Minamoto
+UID: 704140102
+
+4.13.1) 
+
+1. add r5, r2, r1
+2. lw r3, 4(r5)
+3. lw r2, 0(r2)
+4. or r3, r5, r3
+5. sw r3, 0(r5)
+
+1.      F   D   E   M   W
+2           F   D   NOP NOP E   M   W
+3.              F   NOP NOP D   E   M   W
+4.                              F   D   NOP E   M   W
+5.                                  F   NOP D   NOP NOP E   M   W
+
+add r5, r2, r1
+nop
+nop
+lw r3, 4(r5)
+lw r2, 0(r2)
+nop
+or r3, r5, r3
+nop
+nop
+sw r3, 0(r5)
+
+With forwarding logic it would take 9 cycles to execute this code.
+
+4.14)
+
+        lw r2, 0(r1)
+label1: beq r2, r0, label2 # not taken once, then taken
+        lw r3, 0(r2)
+        beq r3, r0, label1 # taken
+label2: sw r1, 0(r2)
+
+Pipeline execution diagram:
+
+lw1     F   D   E   M   W
+beq1            F   D   E   M   W
+sw                      F
+lw2                         F   D   E   M   W
+beq2                                F   D   E   M   W
+beq1                                        F   D   E   M   W
+sw                                                  F   D   E   M   W
+
+4.16.1) 
+
+Always-Taken:
+Actual  T   NT  T   T   NT
+Predict T   T   T   T   T
+
+Accuracy = 3/5 = 0.6 = 60%
+
+Always-not-taken:
+Actual  T   NT  T   T   NT
+Predict NT  NT  NT  NT  NT
+
+Accuracy = 2/5 = 0.4 = 40%
+
+4.16.2)
+
+Actual  T   NT  T   T   NT
+Right   0   1   0   0   0
+Predict NT  NT  NT  T   NT
+
+1/5 = .2 = 20%
+
+4.16.3)
+
+Actual  T   NT  T   T   NT  T   NT  T   T   NT  T   NT  T   T   NT
+Right   0   0   0   1   0   1   0   1   1   0   1   0   1   1   0
+Predict T   NT  T   T   T   T   T   T   T   T   T   T   T   T   T
+
+Accuracy: 3/5 = .6 = 60%

@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20150501063637) do
     t.datetime "updated_at"
     t.string   "first_name",             default: "", null: false
     t.string   "last_name",              default: "", null: false
-    t.string   "courses_taken"
+    t.string   "courses_taken",          default: "", null: false
     t.string   "documents_uploaded"
     t.integer  "credits",                default: 0
   end

@@ -1,48 +1,49 @@
-
 <div class=profile-header>
-	<h1>My Profile
-		<span>
-			<label class="user-profile-label">Credits Remaining: </label><label> <%= @user.credits %> </value>
-		</span>
-	</h1>
+  <h1>My Profile
+    <span>
+      <label class="user-profile-label">Credits Remaining: </label><label class="user-profile-value"><%= @user.credits %></label>
+    </span>
+  </h1>
 </div>
 
 <div class=user-profile-basic-info>
-	<h4> Basic Information </h4>
-	<hr>
-	<ul style="list-style: none;">
-		<li>
-			<label class="user-profile-label">Email: </label><label class="user-profile-value"><%= @user.email %></value>
-		</li>	
-		<li>
-			<label class="user-profile-label">Full Name: </label><label class="user-profile-value"><%= @user.first_name %> <%= @user.last_name %></value>
-		</li>
-		<li>
-			<label class="user-profile-label">Graduation Date: </label><label class="user-profile-value"></value>
-		</li>
-	</ul>
-
+  <h4> Basic Information </h4>
+  <hr/>
+  <ul style="list-style: none;">
+    <li>
+      <label class="user-profile-label">Email: </label><label class="user-profile-value"><%= @user.email %></label>
+    </li>	
+    <li>
+      <label class="user-profile-label">Full Name: </label><label class="user-profile-value"><%= @user.first_name %> <%= @user.last_name %></label>
+    </li>
+    <li>
+      <label class="user-profile-label">Graduation Date: </label><label class="user-profile-value"></label>
+    </li>
+  </ul>
 </div>
 
 <div class=courses-profile-info>
-		<h4> Courses Enrolled 
-			<span>
-				<%= link_to '<button type="button" style="float: right;">Add Course</button>'.html_safe, add_course_path %>
-			</span>
-		</h4>
-	<hr>
+  <h4> Courses Enrolled 
+    <span>
+      <%= link_to 'Add course', add_course_path, class: 'btn btn-primary', style: 'float: right' %>
+    </span>
+  </h4>
+  <hr>
 
-	<ul class="list-group">
-		<% @courses_string.each do |course| %>
-	        <% unless course.nil? %>
-		        <% course_id_start = course.rindex(' ') %>
-		        <% department = course.slice(0, course_id_start) %>
-		        <% course_id = course[course_id_start + 1..-1] %>
-	              <li class="list-group-class"><%= link_to department+' '+course_id, 
-	                search_course_path(dpm: department, course: course_id) %> </li>
-	        <% end %>
-	      <% end %>
-    </ul>
+  <ul class="list-group">
+    <% @courses_string.each do |course| %>
+      <% unless course.nil? %>
+        <% course_id_start = course.rindex(' ') %>
+        <% unless course_id_start.nil? %>
+          <% department = course.slice(0, course_id_start) %>
+          <% course_id = course[course_id_start + 1..-1] %>
+          <li class="list-group-class">
+            <%= link_to department+' '+course_id,search_course_path(dpm: department, course: course_id) %>
+          </li>
+        <% end %>
+      <% end %>
+    <% end %>
+  </ul>
 </div>
 
       
