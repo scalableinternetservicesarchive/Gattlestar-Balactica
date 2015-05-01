@@ -9,12 +9,10 @@ RSpec.describe HomepageController, :type => :controller do
       expect(response).to have_http_status(200)
     end
 
-    it 'should put the stuff in major_abr.yml into @department' do
+    it 'should put the stuff in Course into @course_hash' do
       get :index
 
-      DEPARTMENTS = YAML.load_file('config/major_abr.yml')
-
-      expect(assigns(:department)).to eq(DEPARTMENTS)
+      expect(assigns(:course_hash)).to eq(Course.find_all_courses)
     end
   end
 
