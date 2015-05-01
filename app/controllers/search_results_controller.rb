@@ -45,5 +45,9 @@ class SearchResultsController < ApplicationController
     @specific_course_id = params[:course_id]
     @course = Course.find(@specific_course_id)
     @documents = Document.where(course_id: @specific_course_id)
+
+    respond_to do |format|
+      format.js
+    end
   end
 end
