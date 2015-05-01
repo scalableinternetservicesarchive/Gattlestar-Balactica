@@ -30,9 +30,9 @@ ActiveRecord::Schema.define(version: 20150501063637) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.string   "document"
+    t.text     "description"
     t.string   "year",        default: "",  null: false
     t.string   "course_id",   default: "1", null: false
-    t.string   "description", default: ""
   end
 
   create_table "users", force: :cascade do |t|
