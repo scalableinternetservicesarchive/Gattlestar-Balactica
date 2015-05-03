@@ -29,4 +29,5 @@ class Document < ActiveRecord::Base
   def format_quarter_year
     raise
   end
+
 end
