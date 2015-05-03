@@ -40,11 +40,11 @@ class DocumentUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
   version :thumb do
     process :cover
-    process :resize_to_fill => [50, 50, Magick::NorthGravity]
+    process :resize_to_fill => [1000, 1000]
     process :convert => 'png'
 
     def full_filename (for_file = model.source.file)
-      super.chomp(File.extname(super)) + '.jpg'
+      super.chomp(File.extname(super)) + '.png'
     end
   end
 
