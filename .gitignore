@@ -1,4 +1,4 @@
 tmp/
-*.gitignore
 *.DS_Store
 log/development.log
+CS188

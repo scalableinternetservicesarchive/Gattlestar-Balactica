@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'homepage#index'
+
   resources :users, :only => [:show]
 
   devise_for :user do
@@ -13,8 +15,6 @@ Rails.application.routes.draw do
   get '/documents', to: 'documents#index', as: 'documents'
   delete '/documents/:document_id/delete', to: 'documents#delete', as: 'delete_document'
   post '/documents/:course_id/create', to: 'documents#create', as: 'create_document'
-
-  root 'homepage#index'
 
   get 'about',     to: 'homepage#about',   as: 'about'
   get 'contact',   to: 'homepage#contact', as: 'contact'
@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get ':dpm',         to: 'search_results#show_department', as: 'search_dpm'
   get ':dpm/:course', to: 'search_results#show_course',    as: 'search_course'
 
+  # get ':dpm/:course/:test_id', to: 'document#index', as: 'document'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

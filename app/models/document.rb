@@ -23,4 +23,8 @@ class Document < ActiveRecord::Base
   def display_test
 
   end
+
+  def format_quarter_year
+    raise
+  end
 end

@@ -5,25 +5,19 @@
     </div>
   </div>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <div class="row">
-        <div class="col-sm-6">Course</div>
-        <div class="col-sm-6">Professor</div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="list-group text-center">
+        <% @query_results.each do |result| %>
+          <% unless result.nil? %>
+            <%= link_to result.format_name, search_specific_course_path(course_id: result.id), remote: true, class: 'list-group-item' %>
+          <% end %>
+        <% end %>
       </div>
     </div>
-    <ul class="list-group">
-      <% @query_results.each do |result| %>
-        <% unless result.nil? %>
-          <li class="list-group-item">
-            <div class="row">
-              <div class="col-sm-6"><%= link_to @department+' '+result.course_id, 
-                search_specific_course_path(course_id: result.id) %> </div>
-              <div class="col-sm-6"><%= result.format_name %></div>
-            </div>
-          </li>
-        <% end %>
-      <% end %>
-    </ul>
+    <div class="col-sm-9" id='document_bar'></div>
   </div>
 </div>
+
+

@@ -1,9 +1,7 @@
 class HomepageController < ApplicationController
-  DEPARTMENTS = YAML.load_file('config/major_abr.yml')
-
-  def index 
-    @department = DEPARTMENTS
-  end
+	def index 
+		@course_hash= Course.find_all_courses
+	end
 
   def log_in
   end

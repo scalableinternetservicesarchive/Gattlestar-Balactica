@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+	  <div class="row text-center">
+	    <div class="col-sm-4">Title</div>
+	    <div class="col-sm-3">Quarter and Year</div>
+	    <div class="col-sm-5">Rating</div>
+	  </div>
+	</div>
+
+	<div class="panel-body">
+	  <% if !@documents.empty? %>
+	    <% @documents.each do |document| %>
+	      <div class="row text-center">
+	        <div class="col-sm-4"><a href="<%= document.document.url %>"><%= document.description %></a></div>
+	        <div class="col-sm-3"><%= document.quarter + " " + document.year %></div>
+	        <div class="col-sm-5"><%= document.document.file.extension.downcase %></div>
+	      </div>
+	    <% end %>
+	  <% end %>
+	</div>
+</div>
+<% if user_signed_in? %>
+	<div class="center-block" style="max-width: 200px;">
+  		<%= link_to "Upload new document", new_document_path(course_id: course.id), class: "btn btn-primary" %>
+	</div>
+<% else %>
+	<div class="center-block" style="max-width: 200px;">
+  		<%= link_to "Log in or Sign up to Upload", new_document_path(course_id: course.id), class: "btn btn-primary disabled" %>
+	</div>
+<% end %>
