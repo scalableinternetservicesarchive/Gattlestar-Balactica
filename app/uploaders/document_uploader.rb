@@ -1,5 +1,16 @@
 # encoding: utf-8
 
+#
+# In order for thumbnail generation to work you have to:
+# Mac) Run
+# `brew install imagemagick`
+# `brew install ghostscript`
+#
+# Ubuntu) Run
+# `sudo apt-get install imagemagick`
+# `sudo apt-get install libmagickwand-dev`
+#
+
 class DocumentUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
@@ -38,14 +49,27 @@ class DocumentUploader < CarrierWave::Uploader::Base
   end
 
   # Create different versions of your uploaded files:
-  version :thumb do
+  # You can access the thumbnail files by doing Document.find(thumb_id).document.thumb.url
+  # Strangely even documents that can't be thumbnailed show a url even though the thumbnail wasn't created
+  # I guess to check for it you have to check if image opening failed or not
+  version :thumb, :if => :is_thumbnable? do
     process :cover
-    process :resize_to_fill => [1000, 1000]
+    process :resize_to_fill => [1000, 1000, Magick::NorthGravity]
     process :convert => 'png'
 
     def full_filename (for_file = model.source.file)
       super.chomp(File.extname(super)) + '.png'
     end
+  end
+
+  # Only generate thumbnails for pdf and image files
+  def is_thumbnable?(new_file)
+    return model.is_thumbnable unless model.is_thumbnable.nil?
+    model.is_thumbnable = \
+      begin
+        new_file.content_type.start_with? 'image' or new_file.content_type == 'application/pdf'
+      end
+    return model.is_thumbnable
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

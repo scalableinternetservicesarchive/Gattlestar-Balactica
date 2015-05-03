@@ -3,6 +3,8 @@ require 'file_size_validator'
 class Document < ActiveRecord::Base
   mount_uploader :document, DocumentUploader
 
+  attr_accessor :is_thumbnable
+
   #validates :document, :presence => true, :file_size => {
   #  :maximum => 0.5.megabytes.to_i
   #}
