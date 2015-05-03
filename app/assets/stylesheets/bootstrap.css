@@ -3088,6 +3088,7 @@ fieldset[disabled] .btn-default.active {
   background-color: #158cba;
   border-color: #127ba3;
 }
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary.focus,
@@ -7019,7 +7020,7 @@ a.list-group-item-danger.active:focus {
     margin: 0;
 }
 
-.user-profile-basic-info{
+.profile-info{
   width: 1000px;
   padding: 10px;
   border: 2px solid gray;
@@ -7033,15 +7034,14 @@ a.list-group-item-danger.active:focus {
   font-weight: bold;
 }
 
-.courses-profile-info{
+.profile-info{
   width: 1000px;
   padding: 10px;
   border: 2px solid gray;
-  margin: 50px 50px;
+  margin: 20px 20px;
   background-color: #fafafa;
 
 }
-
 .profile-header > h1 { 
   text-align: left; 
 }
@@ -7049,9 +7049,6 @@ a.list-group-item-danger.active:focus {
   float:right;
   margin-right: 100px;
 }
-
-
-
 .list-group-class {
   position: relative;
   display: block;
