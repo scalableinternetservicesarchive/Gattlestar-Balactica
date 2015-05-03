@@ -11,7 +11,7 @@
 	  <% if !@documents.empty? %>
 	    <% @documents.each do |document| %>
 	      <div class="row text-center">
-	        <div class="col-sm-4"><a href="<%= document.document.url %>"><%= document.description %></a></div>
+            <div class="col-sm-4"><%= link_to document.description, preview_document_path(document_id: document.id) %></div>
 	        <div class="col-sm-3"><%= document.quarter + " " + document.year %></div>
 	        <div class="col-sm-5"><%= document.document.file.extension.downcase %></div>
 	      </div>

@@ -9,6 +9,15 @@ class DocumentsController < ApplicationController
     puts @courses
   end
 
+  def preview
+    @doc = Document.find(params[:document_id])
+    if @doc == nil 
+      return redirect_to root_path, flash: {alert: 'Document does not exist'}
+    end
+    @has_thumbnail = File.exists?(@doc.document.thumb.current_path)
+    @can_download = user_signed_in? && current_user.credits > 0
+  end
+
   def new
     @course_id = params[:course_id]
     if @course_id == nil || @course_id.empty?

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get '/documents/:course_id/new', to: 'documents#new', as: 'new_document'
   get '/documents', to: 'documents#index', as: 'documents'
+  get '/documents/:document_id/preview', to: 'documents#preview', as: 'preview_document'
   delete '/documents/:document_id/delete', to: 'documents#delete', as: 'delete_document'
   post '/documents/:course_id/create', to: 'documents#create', as: 'create_document'
 
