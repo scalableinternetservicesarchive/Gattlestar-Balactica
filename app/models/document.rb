@@ -3,9 +3,9 @@ require 'file_size_validator'
 class Document < ActiveRecord::Base
   mount_uploader :document, DocumentUploader
 
-  validates :document, :presence => true, :file_size => {
-    :maximum => 0.5.megabytes.to_i
-  }
+  #validates :document, :presence => true, :file_size => {
+  #  :maximum => 0.5.megabytes.to_i
+  #}
 
 
   # to get path to uploaded file for @doc do @doc.document.current_path
