@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'courses/add_course'
+
+  get 'courses/remove_course'
+
   root 'homepage#index'
 
   resources :users, :only => [:show]
@@ -19,10 +23,21 @@ Rails.application.routes.draw do
   get 'about',     to: 'homepage#about',   as: 'about'
   get 'contact',   to: 'homepage#contact', as: 'contact'
   get 'search_test', to: 'homepage#search_test', as: 'search_test'
-  get 'add_course', to: 'users#add_course'
-  post 'add_course_post', to: 'users#add_course_post', as: 'add_course_post'
 
+  #user profile
+  get 'add_course_taken', to: 'users#add_course_taken'
+  post 'add_course_taken_post', to: 'users#add_course_taken_post', as: 'add_course_taken_post'
 
+  #admin
+  get 'admin', to: 'users#admin_service', as: 'admin_service'
+
+  #courses
+  get '/courses/new', to: 'courses#new', as: 'add_new_course'
+  post '/courses/create', to: 'courses#create', as: 'create_course'
+  get '/courses/remove', to: 'courses#remove', as: 'remove_course'
+  post '/courses/remove', to: 'courses#delete', as: 'delete_course'
+
+  #autocomplete
   get 'typeahead_department/:query' => 'search_results#typeahead_department'
   get 'typeahead_course_id/:query' => 'search_results#typeahead_course_id'
 

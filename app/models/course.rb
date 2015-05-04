@@ -8,6 +8,10 @@ class Course < ActiveRecord::Base
     Course.where(department: dept, course_id: course_id)
   end
 
+  def self.search_by_course_and_professor(dept, course_id, last_name, first_name)
+    Course.where(department: dept, course_id: course_id, professor_last_name: last_name, professor_first_name: first_name)
+  end
+
   def format_name
     professor_first_name + " " + professor_last_name
   end

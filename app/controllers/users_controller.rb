@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def add_course
+  def add_course_taken
   end
 
   def check_duplicate(dept, course)
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def add_course_post
+  def add_course_taken_post
      @department = params[:dep_name]
       @course = params[:crse_name]
 
@@ -62,9 +62,11 @@ class UsersController < ApplicationController
     else
       @courses_taken = User.find(current_user.id).courses_taken
       if current_user.update_attribute("courses_taken", @courses_taken + ", #{@department} #{@course}")
-        return redirect_to current_user, :notice  => "Successfully Added Course"
+        return redirect_to current_user, :notice  => "Successfully Added Course to Courses Taken"
       end
     end
+  end
 
+  def admin_service
   end
 end
