@@ -25,6 +25,13 @@ class DocumentsController < ApplicationController
       (Time.now.year).downto(1960).each do |year|
         @years.push([year, year])
       end
+
+      @document_type = [
+        ['Midterm', 'Midterm'],
+        ['Final', 'Final'],
+        ['Homework', 'Homework'],
+        ['Other', 'Other']
+      ]
       @doc = Document.new
     end
   end
@@ -56,6 +63,6 @@ class DocumentsController < ApplicationController
   end
 
   def document_params
-    params.require(:document).permit(:quarter, :year, :document, :description)
+    params.require(:document).permit(:quarter, :year, :document, :document_type, :description)
   end
 end

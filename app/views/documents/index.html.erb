@@ -12,6 +12,7 @@
         <div class="col-sm-2">Class</div>
         <div class="col-sm-2">Quarter</div>
         <div class="col-sm-2">Year</div>
+        <div class="col-sm-2">Type</div>
         <div class="col-sm-2">Actions</div>
       </div>
     </div>
@@ -23,6 +24,7 @@
           <div class="col-sm-2"><%= @courses[index].department %> <%= @courses[index].course_id %></div>
           <div class="col-sm-2"><%= document.quarter %></div>
           <div class="col-sm-2"><%= document.year %></div>
+          <div class="col-sm-2"><%= document.document_type %></div>
           <div class="col-sm-2"><%= link_to 'Delete', delete_document_path(document_id: document.id), 
             method: :delete, class: "btn btn-primary" %></div>
         </div>

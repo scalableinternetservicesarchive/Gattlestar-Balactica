@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'courses/add_course'
-
-  get 'courses/remove_course'
-
   root 'homepage#index'
 
   resources :users, :only => [:show]
