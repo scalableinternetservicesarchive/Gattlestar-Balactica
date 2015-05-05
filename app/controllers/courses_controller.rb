@@ -1,4 +1,9 @@
 class CoursesController < ApplicationController
+  before_filter :authenticate_user!
+  before_filter do
+    redirect_to root_path unless current_user && current_user.admin?
+  end
+
   def new
   	@new_course = Course.new
   end
@@ -21,6 +26,7 @@ class CoursesController < ApplicationController
   	@new_course = Course.new(course_params)
 
   	if @new_course.save
+      raise
   		return redirect_to :back, :notice  => "Successfully Created New Course"
   	else
   		if @new_course.errors.any? 
@@ -30,18 +36,9 @@ class CoursesController < ApplicationController
     return redirect_to admin_service_path, flash: {alert: 'Error occured when creating course'}
   end
 
-  def remove
-  	@departments = Course.distinct.pluck(:department)
-  	@courses_ids = Course.distinct.pluck(:course_id)
-  	@professor_last_names = Course.distinct.pluck(:professor_last_name)
-  	@professor_first_names = Course.distinct.pluck(:professor_first_name)
-
-  end
-
   def delete
-  	@delete_course
-  	Course.delete(params[:course])
-    redirect_to admin_service_path
+  	Course.where(:department => params[:department], :course_id => params[:course_id]).destroy_all
+    redirect_to root_path
   end
 
   def course_params

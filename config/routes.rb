@@ -30,8 +30,7 @@ Rails.application.routes.draw do
   #courses
   get '/courses/new', to: 'courses#new', as: 'add_new_course'
   post '/courses/create', to: 'courses#create', as: 'create_course'
-  get '/courses/remove', to: 'courses#remove', as: 'remove_course'
-  post '/courses/remove', to: 'courses#delete', as: 'delete_course'
+  delete '/courses/:department/:course_id/delete', to: 'courses#delete', as: 'delete_course'
 
   #autocomplete
   get 'typeahead_department/:query' => 'search_results#typeahead_department'
