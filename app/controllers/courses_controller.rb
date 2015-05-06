@@ -26,7 +26,6 @@ class CoursesController < ApplicationController
   	@new_course = Course.new(course_params)
 
   	if @new_course.save
-      raise
   		return redirect_to :back, :notice  => "Successfully Created New Course"
   	else
   		if @new_course.errors.any? 

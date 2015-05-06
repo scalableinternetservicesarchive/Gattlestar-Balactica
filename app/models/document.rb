@@ -16,6 +16,5 @@ class Document < ActiveRecord::Base
   end
 
   def format_quarter_year
-    raise
   end
 end
