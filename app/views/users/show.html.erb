@@ -30,20 +30,21 @@
   </h4>
   <hr>
 
-  <ul class="list-group">
-    <% @courses_string.each do |course| %>
-      <% unless course.nil? %>
+  <% @courses_string.each do |course| %>
+    <% unless course.nil? %>
+      <li class="list-group-item">
         <% course_id_start = course.rindex(' ') %>
         <% unless course_id_start.nil? %>
           <% department = course.slice(0, course_id_start) %>
           <% course_id = course[course_id_start + 1..-1] %>
-          <li class="list-group-class">
-            <%= link_to department+' '+course_id,search_course_path(dpm: department, course: course_id) %>
-          </li>
+          <div class="row">
+            <div class="col-sm-2"><%= link_to department+' '+course_id,search_course_path(dpm: department, course: course_id) %></div>
+            <div class="col-sm-2"><%= link_to 'Delete', remove_course_taken_path(department: department, course_id: course_id),  method: :delete, class: "btn btn-primary" %></div>
+          </div>
         <% end %>
-      <% end %>
+      </li>
     <% end %>
-  </ul>
+  <% end %>
 </div>
 
       
