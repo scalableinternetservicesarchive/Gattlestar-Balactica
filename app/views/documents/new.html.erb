@@ -14,6 +14,12 @@
       </span>
     </div>
     <div class="field form-group">
+      <%= f.label :document_type, "Document Type:", class: "col-lg-1 control-label" %>
+      <span class="col-lg-10">
+        <%= f.select :document_type, options_for_select(@document_type), {}, { class: "form-control" } %>
+      </span>
+    </div>
+    <div class="field form-group">
       <%= f.label :description, "Description:", class: "col-lg-1 control-label" %>
       <span class="col-lg-10">
         <%= f.text_area :description, class: "form-control" %>

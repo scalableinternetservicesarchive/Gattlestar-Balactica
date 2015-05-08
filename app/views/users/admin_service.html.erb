@@ -1,0 +1,10 @@
+<% if current_user.admin? %>
+	<div>
+		<h4> Manage Courses </h4>
+		<h6> Add Course: 
+			<span>
+				<%= link_to 'Add course', add_new_course_path, class: 'btn btn-default' %>
+	    </span>
+    </h6>
+	</div>
+<% end %>

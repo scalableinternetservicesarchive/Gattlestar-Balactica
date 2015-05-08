@@ -39,7 +39,7 @@ RSpec.describe SearchResultsController, :type => :controller do
   describe 'GET show_department' do
     before do
       Course.create(department: 'Computer Science', course_id: '31', 
-                    professor_last_name: 'Smallberg', professor_first_name: 'David', test_id: '5')
+                    professor_last_name: 'Smallberg', professor_first_name: 'David')
     end
 
     it 'should redirect to home if a department has no courses' do 

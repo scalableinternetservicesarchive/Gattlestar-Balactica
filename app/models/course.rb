@@ -8,18 +8,13 @@ class Course < ActiveRecord::Base
     Course.where(department: dept, course_id: course_id)
   end
 
+  def self.search_by_course_and_professor(dept, course_id, last_name, first_name)
+    Course.where(department: dept, course_id: course_id, professor_last_name: last_name, professor_first_name: first_name)
+  end
+
   def format_name
     professor_first_name + " " + professor_last_name
   end
-
-	def search_test_id
-		test_ids = test_id.split(',')
-		test_documents = []
-		test_ids.each do |test_id|
-			test_documents << Document.search_test(test_id)
-		end
-		test_documents
-	end
 
 	def self.find_all_department
 		Course.uniq.pluck(:department)
