@@ -4,19 +4,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @courses_string = @user.courses_taken.split(",")
-
-    @courses_string.each do |course|
-      course_id_start = course.rindex(' ')
-      if course_id_start != nil 
-        @dpm_name = course.slice(0, course_id_start)
-        @course_id = course[course_id_start + 1..-1]
-      end
-    end
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml { render :xml => @user }
-    end
   end
 
   def add_course_taken

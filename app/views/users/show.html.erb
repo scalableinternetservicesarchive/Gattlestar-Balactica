@@ -1,51 +1,81 @@
-<div class=profile-header>
-  <h1>My Profile
-    <span>
-      <label class="user-profile-label">Credits Remaining: </label><label class="user-profile-value"><%= @user.credits %></label>
-    </span>
-  </h1>
-</div>
+<div class="container">
+  <!-- Profile header -->
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-9">
+          <h1>My Profile</h1>
+        </div>
+        <div class="col-sm-3" style="text-align: right;">
+          Credits Remaining: 
+          <h1 style="margin-left: 10px; display: inline-block;">
+            <%= @user.credits %>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4> Basic Information </h4>
+    </div>
+  </div>
 
-<div class=profile-info>
-  <h4> Basic Information </h4>
-  <hr/>
-  <ul style="list-style: none;">
-    <li>
-      <label class="user-profile-label">Email: </label><label class="user-profile-value"><%= @user.email %></label>
-    </li>	
-    <li>
-      <label class="user-profile-label">Full Name: </label><label class="user-profile-value"><%= @user.first_name %> <%= @user.last_name %></label>
-    </li>
-    <li>
-      <label class="user-profile-label">Graduation Date: </label><label class="user-profile-value"></label>
-    </li>
-  </ul>
-</div>
+  <table class="table table-striped table-hover">
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td><%= @user.first_name + " " + @user.last_name %></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><%= @user.email %></td>
+      </tr>
+      <tr>
+        <td>Graduation Date</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
-<div class=profile-info>
-  <h4> Courses Enrolled 
-    <span>
-      <%= link_to 'Add course', add_course_taken_path, class: 'btn btn-primary', style: 'float: right' %>
-    </span>
-  </h4>
-  <hr>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-sm-10">
+          <h4> Course Enrolled </h4>
+        </div>
+        <div class="col-sm-2">
+          <%= link_to 'Add course', add_course_taken_path, class: 'btn btn-primary', style: 'float: right' %>
+        </div>
+      </div>
+    </div> 
+  </div>
 
-  <% @courses_string.each do |course| %>
-    <% unless course.nil? %>
-      <li class="list-group-item">
-        <% course_id_start = course.rindex(' ') %>
-        <% unless course_id_start.nil? %>
-          <% department = course.slice(0, course_id_start) %>
-          <% course_id = course[course_id_start + 1..-1] %>
-          <div class="row">
-            <div class="col-sm-2"><%= link_to department+' '+course_id,search_course_path(dpm: department, course: course_id) %></div>
-            <div class="col-sm-2"><%= link_to 'Delete', remove_course_taken_path(department: department, course_id: course_id),  method: :delete, class: "btn btn-primary" %></div>
-          </div>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Course</th>
+        <th>Delete Course</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @courses_string.each_with_index do |course, index| %>
+        <% unless course.nil? %>
+          <% course_id_start = course.rindex(' ') %>
+          <% unless course_id_start.nil? %>
+            <% department = course.slice(0, course_id_start) %>
+            <% course_id = course[course_id_start + 1..-1] %>
+            <tr>
+              <td><%= index %></td>
+              <td>
+                <%= link_to department+' '+course_id,search_course_path(dpm: department, course: course_id) %>
+              </td>
+              <td>hi</td>
+            <tr>
+          <% end %>
         <% end %>
-      </li>
-    <% end %>
-  <% end %>
+      <% end %>
+    </tbody>
+  </table>
 </div>
-
-      
-

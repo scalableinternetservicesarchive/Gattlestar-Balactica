@@ -7042,9 +7042,9 @@ a.list-group-item-danger.active:focus {
   background-color: #fafafa;
 
 }
-.profile-header > h1 { 
+/*.profile-header > h1 { 
   text-align: left; 
-}
+}*/
 .profile-header h1 span { 
   float:right;
   margin-right: 100px;
