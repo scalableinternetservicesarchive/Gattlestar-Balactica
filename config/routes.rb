@@ -22,8 +22,9 @@ Rails.application.routes.draw do
   get 'search_test', to: 'homepage#search_test', as: 'search_test'
 
   #user profile
-  get 'add_course_taken', to: 'users#add_course_taken'
-  post 'add_course_taken_post', to: 'users#add_course_taken_post', as: 'add_course_taken_post'
+  get '/user/add_course_taken', to: 'users#add_course_taken', as: 'add_course_taken'
+  post '/user/add_course_taken_post', to: 'users#add_course_taken_post', as: 'add_course_taken_post'
+  delete '/user/remove_course_taken/:department/:course_id', to: 'users#remove_course_taken', as: 'remove_course_taken'
 
   #admin
   get 'admin', to: 'users#admin_service', as: 'admin_service'

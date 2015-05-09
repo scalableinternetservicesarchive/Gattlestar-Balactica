@@ -4,19 +4,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @courses_string = @user.courses_taken.split(",")
-
-    @courses_string.each do |course|
-      course_id_start = course.rindex(' ')
-      if course_id_start != nil 
-        @dpm_name = course.slice(0, course_id_start)
-        @course_id = course[course_id_start + 1..-1]
-      end
-    end
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml { render :xml => @user }
-    end
   end
 
   def add_course_taken
@@ -68,5 +55,26 @@ class UsersController < ApplicationController
   end
 
   def admin_service
+  end
+
+  def remove_course_taken
+    @department = params[:department]
+    @course_id = params[:course_id]
+
+    @courses_string = current_user.courses_taken.split(",")
+
+    @courses_string.each do |course|
+      course_id_start = course.rindex(' ')
+      if course_id_start != nil 
+        @dpm_string_name = course.slice(0, course_id_start)
+        @course_string_id = course[course_id_start + 1..-1]
+        if @dpm_string_name == @department && @course_string_id == @course_id
+          @courses_string.delete(@department + " " + @course_id)
+        end
+      end
+    end
+    if current_user.update_attribute("courses_taken", @courses_string.join(","))
+        return redirect_to current_user, :notice  => "Successfully Removed Course to Courses Taken"
+    end
   end
 end
