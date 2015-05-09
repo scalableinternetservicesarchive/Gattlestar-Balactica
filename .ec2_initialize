@@ -2,4 +2,6 @@ sudo yum install -y patch
 sudo yum install -y sqlite-devel
 sudo yum install -y ImageMagick
 
-PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
+sudo ln -s /usr/local/include/ImageMagick/wand /usr/local/include/wand
+sudo ln -s /usr/local/include/ImageMagick/magick /usr/local/include/magick
