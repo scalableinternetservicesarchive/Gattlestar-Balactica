@@ -1,3 +1,5 @@
 sudo yum install -y patch
 sudo yum install -y sqlite-devel
 sudo yum install -y ImageMagick
+
+PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
