@@ -71,7 +71,9 @@
               <td>
                 <%= link_to department+' '+course_id,search_course_path(dpm: department, course: course_id) %>
               </td>
-              <td>hi</td>
+              <td>
+                <%= link_to 'Delete', remove_course_taken_path(department: department, course_id: course_id),  method: :delete, class: "btn btn-default" %>
+              </td>
             <tr>
           <% end %>
         <% end %>
