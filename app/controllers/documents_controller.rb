@@ -9,6 +9,15 @@ class DocumentsController < ApplicationController
     puts @courses
   end
 
+  def preview
+    @doc = Document.find(params[:document_id])
+    if @doc == nil 
+      return redirect_to root_path, flash: {alert: 'Document does not exist'}
+    end
+    @has_thumbnail = File.exists?(@doc.document.thumb.current_path)
+    @can_download = user_signed_in? && current_user.credits > 0
+  end
+
   def new
     @course_id = params[:course_id]
     if @course_id == nil || @course_id.empty?
@@ -58,8 +67,23 @@ class DocumentsController < ApplicationController
   end
 
   def delete
-    Document.delete(params[:document_id])
-    redirect_to documents_path
+    @doc = Document.find(params[:document_id])
+    if @doc != nil 
+      document_id = @doc.id
+      if File.exist?(@doc.document.current_path) # delete main document url if exists
+        File.delete(@doc.document.current_path) 
+      end
+      if File.exist?(@doc.document.thumb.current_path) # delete thumbnail url if exists
+        File.delete(@doc.document.thumb.current_path) 
+      end
+
+      @doc.delete # delete document record
+      FileUtils.remove_dir("#{Rails.root}/public/uploads/document/document/#{document_id}") # remove document folder
+
+      redirect_to documents_path
+    else
+      redirect_to root_path, flash: {alert: 'Document does not exist'}
+    end
   end
 
   def document_params

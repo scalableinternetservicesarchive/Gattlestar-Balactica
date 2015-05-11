@@ -32,6 +32,8 @@ gem 'carrierwave'
 
 gem 'fog-aws'
 
+gem 'rmagick'
+
 gem 'will_paginate'
 
 gem 'will_paginate-bootstrap'

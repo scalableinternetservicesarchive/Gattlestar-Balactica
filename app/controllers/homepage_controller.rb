@@ -1,5 +1,5 @@
 class HomepageController < ApplicationController
-	def index 
+  def index 
     @course_hash= Course.find_all_courses
 
     current_page = params[:page].to_i
@@ -13,7 +13,7 @@ class HomepageController < ApplicationController
       start = (current_page-1)*per_page # assuming current_page is 1 based.
       pager.replace(@course_hash.keys[start, per_page])
     end
-	end
+  end
 
   def log_in
   end

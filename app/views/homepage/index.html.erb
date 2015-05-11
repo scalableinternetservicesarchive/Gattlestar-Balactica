@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :title do %> 
-    UCLA Test Bank 
+  UCLA Test Bank 
 <% end %>
 
 <% content_for :meta do %>
@@ -16,10 +16,10 @@
   <h3 style="color: white; text-align: center;">Trade Now!</h3>
   <% if user_signed_in? %>
     <p style="text-align: center;"><%= link_to 'Start', search_test_path, class: "btn btn-default btn-lg" %></p>
-  <% else %>
+<% else %>
     <p style="text-align: center;"><%= link_to "Log in", new_user_session_path, class: "btn btn-success btn-lg" %></p>
-    <p style="text-align: center;"><%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
-  <% end %>
+  <p style="text-align: center;"><%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+<% end %>
 </div>
 
 <div class="container">
@@ -37,18 +37,18 @@
       </tr>
     </thead>
     <tbody>
-      <% @paginated_courses.each do |dept| %>
-        <% course_ids = @course_hash[dept] %>
-        <tr>
-          <td><%= dept %></td>
-          <td>
-            <% course_ids.each do |course_id| %>
-              <%= link_to course_id ,search_course_path(dpm: dept, course: course_id) %>
-              <% unless course_id == course_ids.last %>&nbsp;<% end %>
-            <% end %>
-          </td>
-        </tr>
+    <% @paginated_courses.each do |dept| %>
+      <% course_ids = @course_hash[dept] %>
+    <tr>
+      <td><%= dept %></td>
+      <td>
+        <% course_ids.each do |course_id| %>
+          <%= link_to course_id ,search_course_path(dpm: dept, course: course_id) %>
+        <% unless course_id == course_ids.last %>&nbsp;<% end %>
       <% end %>
+      </td>
+    </tr>
+  <% end %>
     </tbody>
   </table>
 

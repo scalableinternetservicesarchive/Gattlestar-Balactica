@@ -3,9 +3,11 @@ require 'file_size_validator'
 class Document < ActiveRecord::Base
   mount_uploader :document, DocumentUploader
 
-  validates :document, :presence => true, :file_size => {
-    :maximum => 0.5.megabytes.to_i
-  }
+  attr_accessor :is_thumbnable
+
+  #validates :document, :presence => true, :file_size => {
+  #  :maximum => 0.5.megabytes.to_i
+  #}
 
 
   # to get path to uploaded file for @doc do @doc.document.current_path
@@ -17,4 +19,5 @@ class Document < ActiveRecord::Base
 
   def format_quarter_year
   end
+
 end
