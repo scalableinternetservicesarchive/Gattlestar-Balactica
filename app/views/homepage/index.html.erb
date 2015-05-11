@@ -37,7 +37,8 @@
       </tr>
     </thead>
     <tbody>
-      <% @course_hash.each do |dept, course_ids| %>
+      <% @paginated_courses.each do |dept| %>
+        <% course_ids = @course_hash[dept] %>
         <tr>
           <td><%= dept %></td>
           <td>
@@ -50,4 +51,7 @@
       <% end %>
     </tbody>
   </table>
+
+  <%= will_paginate @paginated_courses %>
+
 </div>
