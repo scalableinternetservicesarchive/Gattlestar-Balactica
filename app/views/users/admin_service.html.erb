@@ -1,12 +1,13 @@
 <div class="container">
   <% if current_user.admin? %>
-  	<div>
-  		<h4> Manage Courses </h4>
-  		<h6> Add Course: 
-  			<span>
-  				<%= link_to 'Add course', add_new_course_path, class: 'btn btn-default' %>
-  	    </span>
-      </h6>
-  	</div>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>Manage Course</h4></div>
+      <div class="panel-body">
+        <%= link_to 'Add course', add_new_course_path %>
+        <br>
+        <%= link_to 'Delete course', search_test_path %>
+      </div>
+    </div>
+  <% else %>
   <% end %>
 </div>

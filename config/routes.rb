@@ -40,9 +40,10 @@ Rails.application.routes.draw do
 
   post 'search',       to: 'search_results#search', as: 'search'
   get 'courses/:course_id', to: 'search_results#show_specific_course', as: 'search_specific_course'
-  get ':dpm',         to: 'search_results#show_department', as: 'search_dpm'
-  get ':dpm/:course', to: 'search_results#show_course',    as: 'search_course'
+  get 'department/:dpm',         to: 'search_results#show_department', as: 'search_dpm'
+  get 'department/:dpm/:course', to: 'search_results#show_course',    as: 'search_course'
 
+  match "*path", to: "error#catch_404", via: :all
   # get ':dpm/:course/:test_id', to: 'document#index', as: 'document'
 
   # Example of regular route:
