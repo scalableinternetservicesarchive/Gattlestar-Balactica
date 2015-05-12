@@ -16,7 +16,7 @@
   <load>
     <arrivalphase phase="1" duration="30" unit="second">
       <users arrivalrate="1" unit="second"></users>
-    </arrivalphase>   
+    </arrivalphase>
     <arrivalphase phase="2" duration="30" unit="second">
       <users arrivalrate="2" unit="second"></users>
     </arrivalphase>
@@ -65,39 +65,74 @@
         <http url='/' version='1.1' method='GET'></http>
       </request>
 
-      <!-- wait for up to 2 seconds, user is looking for the sign up button at the first page -->
+      <!-- wait for up to 2 seconds, user is browsing the department -->
       <thinktime value="2" random="true"></thinktime>
 
-      <!-- visit the sign up page, as a user would do.  -->
+      <!-- visit the Anthro 8 apartment, as a user would do.  -->
       <request>
-        <http url='/user/sign_up' version='1.1' method='GET'></http>
+        <http url='/Anthropology/8' version='1.1' method='GET'></http>
       </request>
 
-      <!-- wait for up to 2 seconds, user is looking for the correct professor -->
+      <!-- wait for up to 2 seconds, user is finding the right professor -->
       <thinktime value="2" random="true"></thinktime>
 
-      <!-- create a random number to make a unique first name -->
-      <setdynvars sourcetype="random_number" start="1000" end="9999999">
-        <var name="random_first_name" />
-      </setdynvars>
+      <!-- visit the Anthro 8 apartment, as a user would do.  -->
+      <request>
+        <http url='/Anthropology/8' version='1.1' method='GET'></http>
+      </request>
 
-      <!-- create a random number to make a unique last name -->
+      <!-- create a random number to make a unique community name -->
       <setdynvars sourcetype="random_number" start="1000" end="9999999">
-        <var name="random_last_name" />
+        <var name="random_community_name" />
       </setdynvars>
 
       <!-- post to /communities to create a community.
            remember the url of the created community so we can delete it later -->
       <request subst="true">
+        <dyn_variable name="created_community_url" re="[Ll]ocation: (http://.*)\r"/>
+        <dyn_variable name="created_community_id" re="[Ll]ocation: http://.*/communities/(.*)\r"/>
         <http
-          url='/'
+          url='/communities'
           version='1.1'
           method='POST'
-          contents='user%5Bfirst_name%5D=first_name%%_random_first_name%%&amp;user%5Blast_name%5D=last_name%%_random_last_name%%&amp;user%5Bemail%5D=%%_random_first_name%%%40gmail.com&amp;user%5Bpassword%5D=00000000&amp;user%5Bpassword_confirmation%5D=00000000&amp;commit=Sign+up'>
+          contents='community%5Bname%5D=community_name_%%_random_community_name%%&amp;commit=Create+Community'>
         </http>
       </request>
 
-      <!-- wait for up to 2 seconds, user decides to delete account -->
+      <!-- visit the new submission form, as a user would do.  -->
+      <request>
+        <http url='/submissions/new' version='1.1' method='GET'></http>
+      </request>
+
+      <!-- wait for up to 2 seconds, user is fillinf in new submission form -->
+      <thinktime value="2" random="true"></thinktime>
+
+      <!-- create a new submission in the community we just created -->
+      <setdynvars sourcetype="random_number" start="1000" end="9999999">
+        <var name="random_submission_name" />
+      </setdynvars>
+
+      <request subst="true">
+        <dyn_variable name="created_submission_url" re="[Ll]ocation: (http://.*)\r"/>
+        <dyn_variable name="created_submission_id" re="[Ll]ocation: http://.*/submissions/(.*)\r"/>
+        <http
+          url='/submissions'
+          version='1.1'
+          method='POST'
+          contents='submission%5Btitle%5D=link_%%_random_submission_name%%&amp;submission%5Burl%5D=http%3A%2F%2Fwww.article.com%2F%%_random_submission_name%%&amp;submission%5Bcommunity_id%5D=%%_created_community_id%%&amp;commit=Create+Submission'>
+        </http>
+      </request>
+
+      <!-- wait for up to 2 seconds, user decides to delete submission -->
+      <thinktime value="2" random="true"></thinktime>
+
+      <!-- delete the submission we just created -->
+      <request subst="true">
+        <http url="%%_created_submission_url%%" method="DELETE">
+        </http>
+      </request>
+
+      <!-- wait for up to 2 seconds, user decides to delete community -->
       <thinktime value="2" random="true"></thinktime>
 
       <!-- Uncomment the following to debug print your dynamic variables  --> 
@@ -112,7 +147,7 @@
       <!-- delete the community we created -->
 
       <request subst="true">
-        <http url="/user" method="DELETE">
+        <http url="%%_created_community_url%%" method="DELETE">
         </http>
       </request>
 

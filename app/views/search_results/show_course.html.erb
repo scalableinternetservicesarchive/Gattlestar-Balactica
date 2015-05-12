@@ -1,7 +1,7 @@
 <div class="container">
   <div class="panel panel-default">
     <div class="panel-body">
-      <h2><%= @department %>
+      <h2><%= @department + " " + @course_id%>
         <% if user_signed_in? && current_user.admin? %>
           <span>
            <%= link_to 'Delete Course', delete_course_path(department: @department, course_id: @course_id),
