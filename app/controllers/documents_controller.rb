@@ -18,6 +18,19 @@ class DocumentsController < ApplicationController
     @can_download = user_signed_in? && current_user.credits > 0
   end
 
+  def view
+    @doc = Document.find(params[:document_id])
+    if @doc == nil 
+      return redirect_to root_path, flash: {alert: 'Document does not exist'}
+    end
+    @credits = User.find(current_user.id).credits
+    if @credit == 0
+      return redirect_to root_path, flash: {alert: 'Not enough credits'}
+    end
+    current_user.update_attribute("credits", @credits - 1) 
+    return redirect_to @doc.document.url
+  end
+
   def new
     @course_id = params[:course_id]
     if @course_id == nil || @course_id.empty?

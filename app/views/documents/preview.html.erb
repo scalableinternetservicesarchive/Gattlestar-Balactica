@@ -15,7 +15,7 @@
 
   <div style="text-align: center;">
     <% if @can_download %>
-      <%= link_to 'Get uploaded PDF', @doc.document.url, class: 'btn btn-info' %>
+      <%= link_to 'Get uploaded PDF', view_document_path(document_id: @doc.id), class: 'btn btn-info' %>
     <% else %>
       <p>Can't download!</p>
     <% end %>
