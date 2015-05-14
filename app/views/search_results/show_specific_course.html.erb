@@ -31,10 +31,6 @@
             <div class="col-sm-3"><%= document.quarter %></div>
             <div class="col-sm-3"><%= document.year %></div>
             <div class="col-sm-3"><%= document.document.file.extension.downcase %>
-              <em> 
-                <%=document.reputation_for(:votes)%>
-                <%= link_to "up", vote_document_path(doc_id: document.id, type: "up", course_id: @course_id), method: "post" %>
-                <%= link_to "down", vote_document_path(doc_id: document.id, type: "down", course_id: @course_id), method: "post" %></em>
               </div>
           </div>
         <% end %>

@@ -1,9 +1,10 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
 	  <div class="row text-center">
-	    <div class="col-sm-4">Title</div>
+	    <div class="col-sm-3">Title</div>
 	    <div class="col-sm-3">Quarter and Year</div>
-	    <div class="col-sm-5">Rating</div>
+	    <div class="col-sm-3">File Type</div>
+	    <div class="col-sm-3">Rating</div>
 	  </div>
 	</div>
 
@@ -11,9 +12,13 @@
 	  <% if !@documents.empty? %>
 	    <% @documents.each do |document| %>
 	      <div class="row text-center">
-            <div class="col-sm-4"><%= link_to document.description, preview_document_path(document_id: document.id) %></div>
+            <div class="col-sm-3"><%= link_to document.description, preview_document_path(document_id: document.id) %></div>
 	        <div class="col-sm-3"><%= document.quarter + " " + document.year %></div>
-	        <div class="col-sm-5"><%= document.document.file.extension.downcase %></div>
+	        <div class="col-sm-3"><%= document.document.file.extension.downcase %></div >
+            <div class="col-sm-3"><em>
+                <%=document.reputation_for(:votes)%>
+                <%= link_to "up", vote_document_path(doc_id: document.id, type: "up", course_id: @course_id), method: "post" %>
+                <%= link_to "down", vote_document_path(doc_id: document.id, type: "down", course_id: @course_id), method: "post" %></em></div>
 	      </div>
 	    <% end %>
 	  <% end %>
