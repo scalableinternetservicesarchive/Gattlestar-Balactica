@@ -3,4 +3,8 @@ class ErrorController < ActionController::Base
   def catch_404
     render '404'
   end
+
+  def catch_403
+  	render '403'
+  end
 end

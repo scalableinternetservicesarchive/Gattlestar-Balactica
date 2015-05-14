@@ -46,8 +46,12 @@ class SearchResultsController < ApplicationController
     @course = Course.find(@specific_course_id)
     @documents = Document.where(course_id: @specific_course_id)
 
-    respond_to do |format|
-      format.js
+    begin
+      respond_to do |format|
+        format.js
+      end
+    rescue
+      redirect_to error_403_path
     end
   end
 end
