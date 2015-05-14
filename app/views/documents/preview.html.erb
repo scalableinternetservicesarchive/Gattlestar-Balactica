@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2>Document Preview</h2>
+    </div>
+  </div>
+
+  <div>
+    <% if @has_thumbnail %>
+      <%= image_tag @doc.document.thumb.url, class: 'preview_panel'%>
+    <% else %>
+      <p>There is no thumbnail for the specified image</p>
+    <% end %>
+  </div>
+
+  <div style="text-align: center;">
+    <% if @can_download %>
+      <%= link_to 'Get uploaded PDF', view_document_path(document_id: @doc.id), class: 'btn btn-primary' %>
+    <% else %>
+      <a href="#" class="btn btn-primary disabled">Need more points!</a>
+    <% end %>
+  </div>
+
+</div>

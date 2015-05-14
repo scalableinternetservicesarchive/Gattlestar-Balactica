@@ -32,7 +32,14 @@ gem 'carrierwave'
 
 gem 'fog-aws'
 
+
 gem 'activerecord-reputation-system', require: 'reputation_system'
+
+gem 'rmagick'
+
+gem 'will_paginate'
+
+gem 'will_paginate-bootstrap'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -9,6 +9,28 @@ class DocumentsController < ApplicationController
     puts @courses
   end
 
+  def preview
+    @doc = Document.find(params[:document_id])
+    if @doc == nil 
+      return redirect_to root_path, flash: {alert: 'Document does not exist'}
+    end
+    @has_thumbnail = File.exists?(@doc.document.thumb.current_path)
+    @can_download = user_signed_in? && current_user.credits > 0
+  end
+
+  def view
+    @doc = Document.find(params[:document_id])
+    if @doc == nil 
+      return redirect_to root_path, flash: {alert: 'Document does not exist'}
+    end
+    @credits = User.find(current_user.id).credits
+    if @credit == 0
+      return redirect_to root_path, flash: {alert: 'Not enough credits'}
+    end
+    current_user.update_attribute("credits", @credits - 1) 
+    return redirect_to @doc.document.url
+  end
+
   def new
     @course_id = params[:course_id]
     if @course_id == nil || @course_id.empty?
@@ -25,6 +47,13 @@ class DocumentsController < ApplicationController
       (Time.now.year).downto(1960).each do |year|
         @years.push([year, year])
       end
+
+      @document_type = [
+        ['Midterm', 'Midterm'],
+        ['Final', 'Final'],
+        ['Homework', 'Homework'],
+        ['Other', 'Other']
+      ]
       @doc = Document.new
     end
   end
@@ -51,12 +80,27 @@ class DocumentsController < ApplicationController
   end
 
   def delete
-    Document.delete(params[:document_id])
-    redirect_to documents_path
+    @doc = Document.find(params[:document_id])
+    if @doc != nil 
+      document_id = @doc.id
+      if File.exist?(@doc.document.current_path) # delete main document url if exists
+        File.delete(@doc.document.current_path) 
+      end
+      if File.exist?(@doc.document.thumb.current_path) # delete thumbnail url if exists
+        File.delete(@doc.document.thumb.current_path) 
+      end
+
+      @doc.delete # delete document record
+      FileUtils.remove_dir("#{Rails.root}/public/uploads/document/document/#{document_id}") # remove document folder
+
+      redirect_to documents_path
+    else
+      redirect_to root_path, flash: {alert: 'Document does not exist'}
+    end
   end
 
   def document_params
-    params.require(:document).permit(:quarter, :year, :document, :description)
+    params.require(:document).permit(:quarter, :year, :document, :document_type, :description)
   end
   
   def vote

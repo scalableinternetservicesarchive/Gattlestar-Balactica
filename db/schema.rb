@@ -11,15 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150501063637) do
+ActiveRecord::Schema.define(version: 20150504202831) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "department"
     t.string   "course_id"
     t.string   "professor_last_name"
     t.string   "professor_first_name"
-    t.string   "test_id"
-    t.string   "homework_id"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
@@ -27,32 +25,34 @@ ActiveRecord::Schema.define(version: 20150501063637) do
   create_table "documents", force: :cascade do |t|
     t.string   "uploader_id"
     t.string   "quarter"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "document"
     t.text     "description"
-    t.string   "year",        default: "",  null: false
-    t.string   "course_id",   default: "1", null: false
+    t.string   "year",          default: "",  null: false
+    t.string   "course_id",     default: "1", null: false
+    t.string   "document_type"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "first_name",             default: "", null: false
-    t.string   "last_name",              default: "", null: false
-    t.string   "courses_taken",          default: "", null: false
+    t.string   "first_name",             default: "",    null: false
+    t.string   "last_name",              default: "",    null: false
+    t.string   "courses_taken",          default: "",    null: false
     t.string   "documents_uploaded"
     t.integer  "credits",                default: 0
+    t.boolean  "admin",                  default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

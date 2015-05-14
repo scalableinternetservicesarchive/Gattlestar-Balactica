@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
     def configure_permitted_parameters
       devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :first_name, :last_name) }
     end
+
+    def not_found
+    	raise ActionController:RoutingError.new('Not Found')
+    end
 end

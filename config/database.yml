@@ -23,6 +23,6 @@ test:
   pool: 5
   timeout: 5000
 
-production:
-  <<: *default
-  database: CS188_production
+# production:
+#   <<: *default
+#   database: CS188_production

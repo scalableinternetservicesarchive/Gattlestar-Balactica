@@ -13,25 +13,41 @@ Rails.application.routes.draw do
 
   get '/documents/:course_id/new', to: 'documents#new', as: 'new_document'
   get '/documents', to: 'documents#index', as: 'documents'
+  get '/documents/:document_id/preview', to: 'documents#preview', as: 'preview_document'
   delete '/documents/:document_id/delete', to: 'documents#delete', as: 'delete_document'
   post '/documents/:course_id/create', to: 'documents#create', as: 'create_document'
   post '/documents', to: 'documents#vote', as: 'vote_document'
+  get '/documents/:document_id/view', to: 'documents#view', as: 'view_document'
+
 
   get 'about',     to: 'homepage#about',   as: 'about'
   get 'contact',   to: 'homepage#contact', as: 'contact'
   get 'search_test', to: 'homepage#search_test', as: 'search_test'
-  get 'add_course', to: 'users#add_course'
-  post 'add_course_post', to: 'users#add_course_post', as: 'add_course_post'
 
+  #user profile
+  get '/user/add_course_taken', to: 'users#add_course_taken', as: 'add_course_taken'
+  post '/user/add_course_taken_post', to: 'users#add_course_taken_post', as: 'add_course_taken_post'
+  delete '/user/remove_course_taken/:department/:course_id', to: 'users#remove_course_taken', as: 'remove_course_taken'
 
+  #admin
+  get 'admin', to: 'users#admin_service', as: 'admin_service'
+
+  #courses
+  get '/courses/new', to: 'courses#new', as: 'add_new_course'
+  post '/courses/create', to: 'courses#create', as: 'create_course'
+  delete '/courses/:department/:course_id/delete', to: 'courses#delete', as: 'delete_course'
+
+  #autocomplete
   get 'typeahead_department/:query' => 'search_results#typeahead_department'
   get 'typeahead_course_id/:query' => 'search_results#typeahead_course_id'
 
   post 'search',       to: 'search_results#search', as: 'search'
   get 'courses/:course_id', to: 'search_results#show_specific_course', as: 'search_specific_course'
-  get ':dpm',         to: 'search_results#show_department', as: 'search_dpm'
-  get ':dpm/:course', to: 'search_results#show_course',    as: 'search_course'
+  get 'department/:dpm',         to: 'search_results#show_department', as: 'search_dpm'
+  get 'department/:dpm/:course', to: 'search_results#show_course',    as: 'search_course'
 
+  get 'forbidden', to: "error#catch_403", as: 'error_403'
+  match "*path", to: "error#catch_404", via: :all
   # get ':dpm/:course/:test_id', to: 'document#index', as: 'document'
 
   # Example of regular route:

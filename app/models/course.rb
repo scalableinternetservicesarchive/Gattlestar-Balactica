@@ -1,4 +1,5 @@
 class Course < ActiveRecord::Base
+
   def self.search_by_dept(dept)
     Course.where('department LIKE ?', dept)
   end
@@ -8,30 +9,30 @@ class Course < ActiveRecord::Base
     Course.where(department: dept, course_id: course_id)
   end
 
+  def self.search_by_course_and_professor(dept, course_id, last_name, first_name)
+    Course.where(department: dept, course_id: course_id, professor_last_name: last_name, professor_first_name: first_name)
+  end
+
   def format_name
     professor_first_name + " " + professor_last_name
   end
 
-	def search_test_id
-		test_ids = test_id.split(',')
-		test_documents = []
-		test_ids.each do |test_id|
-			test_documents << Document.search_test(test_id)
-		end
-		test_documents
-	end
-
 	def self.find_all_department
-		Course.uniq.pluck(:department)
+		departments ||= Rails.cache.fetch("valid-department-map:department", expires_in: 1.days) do
+      Course.uniq.pluck(:department)
+    end
+    departments
 	end
 
 	def self.find_all_courses
-		departments = find_all_department
-		course_hash = {}
-		departments.each do |dept|
-			courses = search_by_dept(dept)
-			course_hash[dept] = courses.uniq.pluck(:course_id)
-		end
-		course_hash
+    @all_departments = find_all_department
+    @course_hash ||= Rails.cache.fetch("valid-courses-map:course", expires_in: 1.days) do
+  		@course_hash = {}
+  		@all_departments.each do |dept|
+  			courses = search_by_dept(dept)
+  			@course_hash[dept] = courses.uniq.pluck(:course_id)
+  		end
+  		@course_hash
+    end
 	end
 end

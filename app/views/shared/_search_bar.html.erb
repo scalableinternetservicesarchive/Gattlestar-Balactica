@@ -10,19 +10,13 @@
   <%= form_tag search_path, :class => "form-horizontal", :role => 'search' do %>
     <fieldset>
   	  <span class="field form-group">
-        <span class="col-lg-10">
-  	  	  <%= text_field_tag 'dpm_name', nil, placeholder: 'Department Name', class: 'form-control', autofocus: true %>
-        </span>
+  	  	<%= text_field_tag 'dpm_name', nil, placeholder: 'Department Name', class: 'form-control', autofocus: true %>
       </span>
       <span class="field form-group">
-        <span class="col-lg-10">
-  	  	  <%= text_field_tag 'course_name', nil, placeholder: 'Course ID (Optional)', class: 'form-control' %>
-        </span>
+  	  	<%= text_field_tag 'course_name', nil, placeholder: 'Course ID (Optional)', class: 'form-control' %>
   	  </span>
       <span class="field form-group">
-        <span class="col-lg-10">
-  	      <button type="submit" class="btn btn-default">Search</button>
-        </span>
+        <button type="submit" class="btn btn-default">Search</button>
       </span>
     </fieldset>
   <% end %>
