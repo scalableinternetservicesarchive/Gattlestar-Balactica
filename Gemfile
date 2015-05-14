@@ -31,6 +31,9 @@ gem 'twitter-typeahead-rails'
 gem 'carrierwave'
 
 gem 'fog-aws'
+
+gem 'activerecord-reputation-system', require: 'reputation_system'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

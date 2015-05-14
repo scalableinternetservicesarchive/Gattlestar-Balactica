@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/documents', to: 'documents#index', as: 'documents'
   delete '/documents/:document_id/delete', to: 'documents#delete', as: 'delete_document'
   post '/documents/:course_id/create', to: 'documents#create', as: 'create_document'
+  post '/documents', to: 'documents#vote', as: 'vote_document'
 
   get 'about',     to: 'homepage#about',   as: 'about'
   get 'contact',   to: 'homepage#contact', as: 'contact'

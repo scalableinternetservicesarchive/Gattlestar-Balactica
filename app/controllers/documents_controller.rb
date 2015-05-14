@@ -58,4 +58,11 @@ class DocumentsController < ApplicationController
   def document_params
     params.require(:document).permit(:quarter, :year, :document, :description)
   end
+  
+  def vote
+    value = params[:type] == "up" ? 1 :-1
+    doc = Document.find(params[:doc_id])
+    doc.add_or_update_evaluation(:votes, value, current_user)
+    redirect_to :back#search_specific_course_path(course_id: params[:course_id])
+  end
 end
