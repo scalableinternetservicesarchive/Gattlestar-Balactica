@@ -24,7 +24,7 @@ class DocumentsController < ApplicationController
       return redirect_to root_path, flash: {alert: 'Document does not exist'}
     end
     @credits = User.find(current_user.id).credits
-    if @credit == 0
+    if @credits == 0
       return redirect_to root_path, flash: {alert: 'Not enough credits'}
     end
     current_user.update_attribute("credits", @credits - 1) 
@@ -63,6 +63,10 @@ class DocumentsController < ApplicationController
     if @course_id == nil || @course_id.empty?
       return redirect_to root_path, flash: {alert: 'You need to specify a course'}
     else
+      @description = params[:document][:description]
+      if @description == nil || @description.empty?
+        return redirect_to :back, flash: {alert: 'Description cannot be empty'}
+      end
       @doc = Document.new(document_params)
       @doc.uploader_id = current_user.id
       @doc.course_id = @course_id
