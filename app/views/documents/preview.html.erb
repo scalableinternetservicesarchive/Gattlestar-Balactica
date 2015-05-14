@@ -7,7 +7,7 @@
 
   <div>
     <% if @has_thumbnail %>
-      <%= image_tag @doc.document.thumb.url %>
+      <%= image_tag @doc.document.thumb.url, class: 'preview_panel'%>
     <% else %>
       <p>There is no thumbnail for the specified image</p>
     <% end %>
@@ -15,9 +15,9 @@
 
   <div style="text-align: center;">
     <% if @can_download %>
-      <%= link_to 'Get uploaded PDF', view_document_path(document_id: @doc.id), class: 'btn btn-info' %>
+      <%= link_to 'Get uploaded PDF', view_document_path(document_id: @doc.id), class: 'btn btn-primary' %>
     <% else %>
-      <p>Can't download!</p>
+      <a href="#" class="btn btn-primary disabled">Need more points!</a>
     <% end %>
   </div>
 
