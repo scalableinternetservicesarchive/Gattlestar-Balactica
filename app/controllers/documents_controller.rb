@@ -15,7 +15,7 @@ class DocumentsController < ApplicationController
       return redirect_to root_path, flash: {alert: 'Document does not exist'}
     end
     @has_thumbnail = File.exists?(@doc.document.thumb.current_path)
-    @can_download = user_signed_in? && current_user.credits > 0
+    @can_download = user_signed_in? && (current_user.credits > 0 || @doc.uploader_id.to_i == current_user.id)
   end
 
   def view
@@ -23,11 +23,13 @@ class DocumentsController < ApplicationController
     if @doc == nil 
       return redirect_to root_path, flash: {alert: 'Document does not exist'}
     end
-    @credits = User.find(current_user.id).credits
-    if @credits == 0
-      return redirect_to root_path, flash: {alert: 'Not enough credits'}
+    if @doc.uploader_id.to_i != current_user.id
+      @credits = User.find(current_user.id).credits
+      if @credits == 0
+        return redirect_to root_path, flash: {alert: 'Not enough credits'}
+      end
+      current_user.update_attribute("credits", @credits - 1) 
     end
-    current_user.update_attribute("credits", @credits - 1) 
     return redirect_to @doc.document.url
   end
 
