@@ -5,31 +5,37 @@ class CoursesController < ApplicationController
   end
 
   def new
-  	@new_course = Course.new
+    @new_course = Course.new
   end
 
   def create
-  	@dep = params[:course][:department]
-  	@course_id = params[:course][:course_id]
-  	@prof_first = params[:course][:professor_first_name]
-  	@prof_last = params[:course][:professor_last_name]
-  	if @dep == nil || @dep.empty? || @course_id == nil || @course_id.empty?
-  		redirect_to :back, flash: {alert: 'Please enter a valid department and course'}
-  	end
+    @course = params[:course]
+    if @course == nil 
+      return redirect_to :back, flash: {alert: 'Please enter a valid department and course'}
+    end
 
-  	#check if class in database
+    @dep = @course[:department]
+    @course_id = @course[:course_id]
+    @prof_first = @course[:professor_first_name]
+    @prof_last = @course[:professor_last_name]
+
+    if @dep == nil || @dep.empty? || @course_id == nil || @course_id.empty?
+      return redirect_to :back, flash: {alert: 'Please enter a valid department and course'}
+    end
+
+    #check if class in database
     @query_results = Course.search_by_course_and_professor(@dep, @course_id, @prof_last, @prof_first)
     if @query_results != nil && !@query_results.empty?
       return redirect_to :back, flash: {alert: 'Class already in database'}
     end
 
-  	@new_course = Course.new(course_params)
+    @new_course = Course.new(course_params)
 
-  	if @new_course.save
-  		return redirect_to :back, :notice  => "Successfully Created New Course"
-  	else
-  		if @new_course.errors.any? 
-          puts @doc.errors.full_messages
+    if @new_course.save
+      return redirect_to :back, :notice  => "Successfully Created New Course"
+    else
+      if @new_course.errors.any? 
+        puts @doc.errors.full_messages
       end
     end
     return redirect_to admin_service_path, flash: {alert: 'Error occured when creating course'}
