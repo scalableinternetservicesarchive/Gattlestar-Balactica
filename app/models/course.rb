@@ -18,11 +18,9 @@ class Course < ActiveRecord::Base
   end
 
 	def self.find_all_department
-    raise
 		@departments ||= Rails.cache.fetch("valid-department-map:department", expires_in: 1.days) do
       Course.uniq.pluck(:department)
     end
-    raise
     @departments
 	end
 
