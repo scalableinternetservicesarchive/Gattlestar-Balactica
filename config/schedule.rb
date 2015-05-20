@@ -4,7 +4,7 @@
 # http://en.wikipedia.org/wiki/Cron
 
 # Example:
-set :environment, "development"
+#set :environment, "development"
 set :output, "log/cron_log.log"
 #
 # every 2.hours do
@@ -19,5 +19,9 @@ set :output, "log/cron_log.log"
 
 # Learn more: http://github.com/javan/whenever
 every 1.day, :at => '12:00 am' do
+  rake "update:reset_daily_downloads"
+end
+
+every 2.minute do
   rake "update:reset_daily_downloads"
 end
