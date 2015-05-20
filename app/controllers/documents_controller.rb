@@ -61,6 +61,10 @@ class DocumentsController < ApplicationController
   end
 
   def create
+    @docs_uploaded_today = User.find(current_user.id).docs_uploaded_today
+    if @docs_uploaded_today >= 3
+      return redirect_to :back, flash: {alert: 'You can only upload up to 3 documents a day'}
+    end
     @course_id = params[:course_id]
     if @course_id == nil || @course_id.empty?
       return redirect_to root_path, flash: {alert: 'You need to specify a course'}
@@ -75,6 +79,7 @@ class DocumentsController < ApplicationController
       if @doc.save 
         @credits = User.find(current_user.id).credits
         current_user.update_attribute("credits", @credits + 1) 
+        current_user.update_attribute("docs_uploaded_today", @docs_uploaded_today + 1) 
         return redirect_to documents_path
       else
         if @doc.errors.any? 

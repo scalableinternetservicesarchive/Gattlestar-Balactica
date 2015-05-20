@@ -40,6 +40,7 @@ gem 'will_paginate-bootstrap'
 
 gem 'dalli'
 
+gem 'whenever'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
