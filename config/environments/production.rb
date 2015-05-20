@@ -82,7 +82,6 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   host = `/opt/aws/bin/ec2-metadata -p`
-  puts "host is #{host}"
   host_start = host.index(' ')
   config.action_mailer.default_url_options = { :host => host[host_start + 1..-1] }
 
