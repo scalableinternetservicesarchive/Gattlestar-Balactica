@@ -104,7 +104,70 @@ RSpec.describe CoursesController, :type => :controller do
     end
   end
 
-  describe 'GET delete_course' do
+  describe 'DELETE delete_course' do
+    it 'should not delete course when not signed in' do
+      FactoryGirl.create(:course, department: 'Computer Science', course_id: '32')
+      delete :delete, {
+        department: 'Computer Science',
+        course_id: '32'
+      }
+      expect(response).to redirect_to new_user_session_path
+      expect(Course.all.length).to eq(1)
+
+      Course.delete_all
+    end
+
+    it 'should not delete courses with the same department but with different course id' do
+      sign_in user
+      FactoryGirl.create(:course, department: 'Computer Science', course_id: '181')
+      FactoryGirl.create(:course, department: 'Computer Science', course_id: '32')
+
+      delete :delete, {
+        department: 'Computer Science',
+        course_id: '32'
+      }
+
+      expect(response).to redirect_to root_path
+      expect(Course.all.length).to eq(1)
+      expect(Course.first.course_id).to eq('181')
+
+      Course.delete_all
+    end
+
+    it 'should not delete courses with the same course id but with different departments' do
+      sign_in user
+      FactoryGirl.create(:course, department: 'Computer Science', course_id: '181')
+      FactoryGirl.create(:course, department: 'Biology', course_id: '181')
+
+      delete :delete, {
+        department: 'Computer Science',
+        course_id: '181'
+      }
+
+      expect(response).to redirect_to root_path
+      expect(Course.all.length).to eq(1)
+      expect(Course.first.department).to eq('Biology')
+
+      Course.delete_all
+    end
+
+    it 'should delete all courses with same course id and department regardless of professor' do
+      sign_in user
+      course1 = FactoryGirl.create(:course, department: 'Computer Science', course_id: '181')
+      course2 = FactoryGirl.create(:course, department: 'Computer Science', course_id: '181')
+      course3 = FactoryGirl.create(:course, department: 'Computer Science', course_id: '181')
+
+      expect(course1.professor_first_name).not_to eq(course2.professor_first_name)
+      expect(course2.professor_first_name).not_to eq(course3.professor_first_name)
+
+      delete :delete, {
+        department: 'Computer Science',
+        course_id: '181'
+      }
+
+      expect(response).to redirect_to root_path
+      expect(Course.all.length).to eq(0)
+    end
   end
 
 end
