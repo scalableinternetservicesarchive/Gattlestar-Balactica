@@ -27,7 +27,6 @@ class Course < ActiveRecord::Base
 	def self.find_all_courses
     @all_departments = find_all_department
     @course_hash ||= Rails.cache.fetch("valid-courses-map:course", expires_in: 1.days) do
-  		@course_hash = {}
   		@all_departments.each do |dept|
   			courses = search_by_dept(dept)
   			@course_hash[dept] = courses.uniq.pluck(:course_id)
