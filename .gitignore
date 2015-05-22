@@ -1,6 +1,6 @@
 tmp/
 *.DS_Store
-log/development.log
+log/*
 *.sqlite3
 CS188
 public/uploads
