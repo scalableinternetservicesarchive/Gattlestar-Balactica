@@ -15,7 +15,7 @@ class DocumentsController < ApplicationController
       return redirect_to root_path, flash: {alert: 'Document does not exist'}
     end
     @has_thumbnail = File.exists?(@doc.document.thumb.current_path)
-    @can_download = user_signed_in? && current_user.credits > 0
+    @can_download = user_signed_in? && (current_user.credits > 0 || @doc.uploader_id.to_i == current_user.id)
   end
 
   def view
@@ -23,11 +23,13 @@ class DocumentsController < ApplicationController
     if @doc == nil 
       return redirect_to root_path, flash: {alert: 'Document does not exist'}
     end
-    @credits = User.find(current_user.id).credits
-    if @credit == 0
-      return redirect_to root_path, flash: {alert: 'Not enough credits'}
+    if @doc.uploader_id.to_i != current_user.id
+      @credits = User.find(current_user.id).credits
+      if @credits == 0
+        return redirect_to root_path, flash: {alert: 'Not enough credits'}
+      end
+      current_user.update_attribute("credits", @credits - 1) 
     end
-    current_user.update_attribute("credits", @credits - 1) 
     return redirect_to @doc.document.url
   end
 
@@ -59,16 +61,25 @@ class DocumentsController < ApplicationController
   end
 
   def create
+    @docs_uploaded_today = User.find(current_user.id).docs_uploaded_today
+    if @docs_uploaded_today >= 3
+      return redirect_to :back, flash: {alert: 'You can only upload up to 3 documents a day'}
+    end
     @course_id = params[:course_id]
     if @course_id == nil || @course_id.empty?
       return redirect_to root_path, flash: {alert: 'You need to specify a course'}
     else
+      @description = params[:document][:description]
+      if @description == nil || @description.empty?
+        return redirect_to :back, flash: {alert: 'Description cannot be empty'}
+      end
       @doc = Document.new(document_params)
       @doc.uploader_id = current_user.id
       @doc.course_id = @course_id
       if @doc.save 
         @credits = User.find(current_user.id).credits
         current_user.update_attribute("credits", @credits + 1) 
+        current_user.update_attribute("docs_uploaded_today", @docs_uploaded_today + 1) 
         return redirect_to documents_path
       else
         if @doc.errors.any? 
