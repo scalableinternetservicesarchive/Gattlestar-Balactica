@@ -18,6 +18,7 @@ class Course < ActiveRecord::Base
   end
 
 	def self.find_all_department
+<<<<<<< HEAD
 		@departments ||= Rails.cache.fetch("valid-department-map:department", expires_in: 1.days) do
       Course.uniq.pluck(:department)
     end
@@ -34,5 +35,18 @@ class Course < ActiveRecord::Base
   		end
   		@course_hash
     end
+=======
+		Course.uniq.pluck(:department)
+	end
+
+	def self.find_all_courses
+   departments = find_all_department
+   course_hash = {}
+   departments.each do |dept|
+     courses = search_by_dept(dept)
+     course_hash[dept] = courses.uniq.pluck(:course_id)
+   end
+   course_hash
+>>>>>>> 6186b91b4c9c24256f34972d414ae1fb3ec5956d
 	end
 end
