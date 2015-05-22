@@ -1,1 +1,2 @@
 rake db:seed
+whenever --update-crontab
