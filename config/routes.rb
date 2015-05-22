@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :messages, only: [:new, :create]
+
   root 'homepage#index'
 
   resources :users, :only => [:show]

@@ -1,0 +1,192 @@
+  [1m[36m (118.5ms)[0m  [1mCREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "department" varchar, "course_id" varchar, "professor_last_name" varchar, "professor_first_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (132.0ms)[0m  CREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uploader_id" varchar, "quarter" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "document" varchar, "description" text, "year" varchar DEFAULT '' NOT NULL, "course_id" varchar DEFAULT '1' NOT NULL, "document_type" varchar) 
+  [1m[36m (134.2ms)[0m  [1mCREATE TABLE "rs_evaluations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reputation_name" varchar, "source_id" integer, "source_type" varchar, "target_id" integer, "target_type" varchar, "value" float DEFAULT 0.0, "created_at" datetime, "updated_at" datetime, "data" text) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (121.1ms)[0m  [1mCREATE UNIQUE INDEX "index_rs_evaluations_on_reputation_name_and_source_and_target" ON "rs_evaluations" ("reputation_name", "source_id", "source_type", "target_id", "target_type")[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_evaluations_on_reputation_name_and_source_and_target' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_evaluations_on_reputation_name_and_source_and_target' AND type='index'
+
+  [1m[36m (87.0ms)[0m  [1mCREATE  INDEX "index_rs_evaluations_on_reputation_name" ON "rs_evaluations" ("reputation_name")[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_evaluations_on_reputation_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_evaluations_on_reputation_name' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_evaluations_on_reputation_name_and_source_and_target' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_evaluations_on_reputation_name_and_source_and_target' AND type='index'
+[0m
+  [1m[35m (119.2ms)[0m  CREATE  INDEX "index_rs_evaluations_on_source_id_and_source_type" ON "rs_evaluations" ("source_id", "source_type")
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_evaluations_on_source_id_and_source_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_evaluations_on_source_id_and_source_type' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_evaluations_on_reputation_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_evaluations_on_reputation_name' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_evaluations_on_reputation_name_and_source_and_target' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_evaluations_on_reputation_name_and_source_and_target' AND type='index'
+[0m
+  [1m[35m (117.8ms)[0m  CREATE  INDEX "index_rs_evaluations_on_target_id_and_target_type" ON "rs_evaluations" ("target_id", "target_type")
+  [1m[36m (166.2ms)[0m  [1mCREATE TABLE "rs_reputation_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sender_id" integer, "sender_type" varchar, "receiver_id" integer, "weight" float DEFAULT 1.0, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (143.8ms)[0m  CREATE UNIQUE INDEX "index_rs_reputation_messages_on_receiver_id_and_sender" ON "rs_reputation_messages" ("receiver_id", "sender_id", "sender_type")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_reputation_messages_on_receiver_id_and_sender' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_reputation_messages_on_receiver_id_and_sender' AND type='index'
+[0m
+  [1m[35m (144.8ms)[0m  CREATE  INDEX "index_rs_reputation_messages_on_receiver_id" ON "rs_reputation_messages" ("receiver_id")
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_reputation_messages_on_receiver_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_reputation_messages_on_receiver_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_reputation_messages_on_receiver_id_and_sender' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_reputation_messages_on_receiver_id_and_sender' AND type='index'
+
+  [1m[36m (120.9ms)[0m  [1mCREATE  INDEX "index_rs_reputation_messages_on_sender_id_and_sender_type" ON "rs_reputation_messages" ("sender_id", "sender_type")[0m
+  [1m[35m (98.5ms)[0m  CREATE TABLE "rs_reputations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reputation_name" varchar, "value" float DEFAULT 0.0, "aggregated_by" varchar, "target_id" integer, "target_type" varchar, "active" boolean DEFAULT 't', "created_at" datetime, "updated_at" datetime, "data" text) 
+  [1m[36m (133.0ms)[0m  [1mCREATE UNIQUE INDEX "index_rs_reputations_on_reputation_name_and_target" ON "rs_reputations" ("reputation_name", "target_id", "target_type")[0m
+  [1m[35m (0.5ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_reputations_on_reputation_name_and_target' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_reputations_on_reputation_name_and_target' AND type='index'
+
+  [1m[36m (142.3ms)[0m  [1mCREATE  INDEX "index_rs_reputations_on_reputation_name" ON "rs_reputations" ("reputation_name")[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_reputations_on_reputation_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_reputations_on_reputation_name' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rs_reputations_on_reputation_name_and_target' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rs_reputations_on_reputation_name_and_target' AND type='index'
+[0m
+  [1m[35m (141.8ms)[0m  CREATE  INDEX "index_rs_reputations_on_target_id_and_target_type" ON "rs_reputations" ("target_id", "target_type")
+  [1m[36m (144.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime, "updated_at" datetime, "first_name" varchar DEFAULT '' NOT NULL, "last_name" varchar DEFAULT '' NOT NULL, "courses_taken" varchar DEFAULT '' NOT NULL, "documents_uploaded" varchar, "credits" integer DEFAULT 0, "admin" boolean DEFAULT 'f', "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "docs_uploaded_today" integer DEFAULT 0) [0m
+  [1m[35m (111.5ms)[0m  CREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+[0m
+  [1m[35m (133.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+
+  [1m[36m (77.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (108.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (156.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (121.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150520072600')[0m
+  [1m[35m (145.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150514215051')
+  [1m[36m (122.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150514215049')[0m
+  [1m[35m (145.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150504194014')
+  [1m[36m (145.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150422015819')[0m
+  [1m[35m (112.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150504202831')
+  [1m[36m (202.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150520004844')[0m
+  [1m[35m (179.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150428072849')
+  [1m[36m (168.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150501063637')[0m
+  [1m[35m (145.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150428204133')
+  [1m[36m (245.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150427221734')[0m
+  [1m[35m (122.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150514215052')
+  [1m[36m (111.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150417223552')[0m
+  [1m[35m (101.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150424074439')
+  [1m[36m (146.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150514215046')[0m
+  [1m[35m (211.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150417215508')
+  [1m[36m (244.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150514215048')[0m
+  [1m[35m (145.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150514215045')
+  [1m[36m (145.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150501060752')[0m
+  [1m[35m (189.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150501014807')
+  [1m[36m (189.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150514215047')[0m
+  [1m[35m (212.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150427221401')
+  [1m[36m (202.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150504194254')[0m
+  [1m[35m (167.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150424035520')
+  [1m[36m (145.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150417215707')[0m
+  [1m[35m (111.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150514215050')
+  [1m[36m (134.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150514215053')[0m
+  [1m[35m (111.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150504194042')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-05-22 09:27:40', '2015-05-22 09:27:40', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-05-22 09:27:40', '2015-05-22 09:27:40', 298486374)[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: users.email: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-05-22 09:27:40', '2015-05-22 09:27:40', 298486374)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-05-22 09:28:56', '2015-05-22 09:28:56', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-05-22 09:28:56', '2015-05-22 09:28:56', 298486374)[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: users.email: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-05-22 09:28:56', '2015-05-22 09:28:56', 298486374)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-05-22 09:29:19', '2015-05-22 09:29:19', 980190962)
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-05-22 09:29:19', '2015-05-22 09:29:19', 298486374)[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: users.email: INSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2015-05-22 09:29:19', '2015-05-22 09:29:19', 298486374)
+  [1m[35m (0.1ms)[0m  rollback transaction
