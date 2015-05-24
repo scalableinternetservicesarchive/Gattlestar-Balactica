@@ -15,7 +15,11 @@
 
   <div style="text-align: center;">
     <% if @can_download %>
-      <%= link_to 'Get uploaded PDF', view_document_path(document_id: @doc.id), class: 'btn btn-primary' %>
+      <% if @doc.document.thumb.url != nil %>
+        <%= link_to 'Get uploaded PDF', view_document_path(document_id: @doc.id), class: 'btn btn-primary' %>
+      <% else %>
+        <a href="#" class="btn btn-primary disabled">Document has no uploaded file</a>
+      <% end %>
     <% else %>
       <a href="#" class="btn btn-primary disabled">Need more points!</a>
     <% end %>

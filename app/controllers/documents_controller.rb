@@ -14,7 +14,7 @@ class DocumentsController < ApplicationController
     if @doc == nil 
       return redirect_to root_path, flash: {alert: 'Document does not exist'}
     end
-    @has_thumbnail = File.exists?(@doc.document.thumb.current_path)
+    @has_thumbnail = @doc.document.thumb.current_path != nil && File.exists?(@doc.document.thumb.current_path)
     @can_download = user_signed_in? && (current_user.credits > 0 || @doc.uploader_id.to_i == current_user.id)
   end
 
@@ -22,6 +22,9 @@ class DocumentsController < ApplicationController
     @doc = Document.find(params[:document_id])
     if @doc == nil 
       return redirect_to root_path, flash: {alert: 'Document does not exist'}
+    end
+    if @doc.document.url == nil 
+      return redirect_to root_path, flash: {alert: 'You cannot view blank document'}
     end
     if @doc.uploader_id.to_i != current_user.id
       @credits = User.find(current_user.id).credits
@@ -94,15 +97,17 @@ class DocumentsController < ApplicationController
     @doc = Document.find(params[:document_id])
     if @doc != nil 
       document_id = @doc.id
-      if File.exist?(@doc.document.current_path) # delete main document url if exists
+      if @doc.document.current_path != nil && File.exist?(@doc.document.current_path) # delete main document url if exists
         File.delete(@doc.document.current_path) 
       end
-      if File.exist?(@doc.document.thumb.current_path) # delete thumbnail url if exists
+      if @doc.document.thumb.current_path != nil && File.exist?(@doc.document.thumb.current_path) # delete thumbnail url if exists
         File.delete(@doc.document.thumb.current_path) 
       end
 
       @doc.delete # delete document record
-      FileUtils.remove_dir("#{Rails.root}/public/uploads/document/document/#{document_id}") # remove document folder
+      if File.directory?("#{Rails.root}/public/uploads/document/document/#{document_id}")
+        FileUtils.remove_dir("#{Rails.root}/public/uploads/document/document/#{document_id}") # remove document folder
+      end
 
       redirect_to documents_path
     else

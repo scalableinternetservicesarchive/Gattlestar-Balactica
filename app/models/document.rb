@@ -5,9 +5,9 @@ class Document < ActiveRecord::Base
 
   attr_accessor :is_thumbnable
 
-  validates :document, :presence => true, :file_size => {
-    :maximum => 10.0.megabytes.to_i
-  }
+  #validates :document, :presence => true, :file_size => {
+  #  :maximum => 10.0.megabytes.to_i
+  #}
 
   has_reputation :votes, source: :user, aggregated_by: :sum
   validates :description, :presence => true
