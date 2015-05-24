@@ -2,6 +2,8 @@ class HomepageController < ApplicationController
   def index 
     @course_hash= Course.find_all_courses
 
+    ExampleMailer.sample_email.deliver
+
     current_page = params[:page].to_i
     if current_page == 0
       current_page = 1

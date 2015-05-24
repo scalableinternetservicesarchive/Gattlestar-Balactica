@@ -54,4 +54,8 @@ class SearchResultsController < ApplicationController
       redirect_to error_403_path
     end
   end
+
+  def report
+    ExampleMailer.sample_email.deliver
+  end
 end

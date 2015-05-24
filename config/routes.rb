@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   get 'courses/:course_id', to: 'search_results#show_specific_course', as: 'search_specific_course'
   get 'department/:dpm',         to: 'search_results#show_department', as: 'search_dpm'
   get 'department/:dpm/:course', to: 'search_results#show_course',    as: 'search_course'
+  get 'department/report', to: 'search_results#report', as: 'report'
 
   get 'forbidden', to: "error#catch_403", as: 'error_403'
   match "*path", to: "error#catch_404", via: :all
