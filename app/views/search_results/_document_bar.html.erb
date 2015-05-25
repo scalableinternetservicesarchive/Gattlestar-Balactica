@@ -28,7 +28,8 @@
                         Are you sure you want to report this document as spam?
                       </div>
                       <div class="modal-footer reportspam">
-                         
+                        <%= link_to 'Yes', document_spam_path(description:document.description, document_id: document.id, reporter: current_user.email), class: 'btn btn-default', remote: true, id: 'yes' %>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
                       </div>                    
                     </div> <!-- End Modal Content -->
                   </div> <!-- End Modal Dialog -->
