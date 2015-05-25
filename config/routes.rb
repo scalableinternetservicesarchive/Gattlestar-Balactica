@@ -40,6 +40,8 @@ Rails.application.routes.draw do
   get 'typeahead_course_id/:query' => 'search_results#typeahead_course_id'
 
   post 'search',       to: 'search_results#search', as: 'search'
+  get 'report_spam/:document_id', to: 'search_results#report_spam', as: 'report_spam'
+  get 'report_spam/document_spam/:description/:document_id/:reporter', to: 'search_results#document_spam', as: 'document_spam'
   get 'courses/:course_id', to: 'search_results#show_specific_course', as: 'search_specific_course'
   get 'department/:dpm',         to: 'search_results#show_department', as: 'search_dpm'
   get 'department/:dpm/:course', to: 'search_results#show_course',    as: 'search_course'

@@ -54,4 +54,22 @@ class SearchResultsController < ApplicationController
       redirect_to error_403_path
     end
   end
+
+  def report_spam
+    @doc = Document.find(params[:document_id])
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def document_spam
+    @desc = params[:description]
+    @document_id = params[:document_id]
+    @reporter = params[:reporter]
+    SpamMailer.spam_email(@desc, @document_id, @reporter).deliver
+
+    render :nothing => true
+  end
+
 end
