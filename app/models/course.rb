@@ -6,7 +6,9 @@ class Course < ActiveRecord::Base
 
   # return ActiveRecords relation, not an array
   def self.search_by_course(dept, course_id)
-    @dept_id = Course.where(department: dept, course_id: course_id)
+    dept_id ||= Rails.cache.fetch("valid-course-map:#{dept}-#{course_id}", expires_in: 1.days) do
+      dept_id = Course.where(department: dept, course_id: course_id)
+    end
   end
 
   def self.search_by_course_and_professor(dept, course_id, last_name, first_name)
