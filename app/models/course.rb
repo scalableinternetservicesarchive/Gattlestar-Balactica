@@ -12,9 +12,7 @@ class Course < ActiveRecord::Base
   end
 
   def self.search_by_course_and_professor(dept, course_id, last_name, first_name)
-    @specific_course ||= Rails.cache.fetch("valid-course-map:#{dept}-#{course_id}", expires_in: 1.days) do
-      @specific_course = Course.where(department: dept, course_id: course_id, professor_last_name: last_name, professor_first_name: first_name)
-    end
+    @specific_course = Course.where(department: dept, course_id: course_id, professor_last_name: last_name, professor_first_name: first_name)
   end
 
   def format_name
