@@ -5,14 +5,14 @@
 #
 # Generated May 28, 2015
 # 
-# This configuration file is custom generated for UCLA_22
+# This configuration file is custom generated for UCLA_23
 #
 # For full documentation of agent configuration options, please refer to
 # https://docs.newrelic.com/docs/agents/ruby-agent/installation-configuration/ruby-agent-configuration
 
 common: &default_settings
   # Required license key associated with your New Relic account.
-  license_key: 5d7a0e212c94a7598c39e9e481489ef4fc3c6202
+  license_key: 277b027a7d24989df947dd81511c9b8e4179f80b
 
   # Your application name. Renaming here affects where data displays in New
   # Relic.  For more details, see https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/renaming-applications

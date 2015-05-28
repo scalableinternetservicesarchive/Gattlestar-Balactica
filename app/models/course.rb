@@ -1,7 +1,9 @@
 class Course < ActiveRecord::Base
 
   def self.search_by_dept(dept)
-    Course.where('department LIKE ?', dept)
+    dept_courses ||= Rails.cache.fetch("valid-department-map:#{dept}", expires_in: 1.days) do
+      Course.where('department LIKE ?', dept)
+    end
   end
 
   # return ActiveRecords relation, not an array
