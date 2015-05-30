@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520072600) do
+ActiveRecord::Schema.define(version: 20150526214050) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "department"
@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 20150520072600) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
+
+  add_index "courses", ["department", "course_id"], name: "index_courses_on_department_and_course_id"
+  add_index "courses", ["department"], name: "index_courses_on_department"
 
   create_table "documents", force: :cascade do |t|
     t.string   "uploader_id"
@@ -33,6 +36,8 @@ ActiveRecord::Schema.define(version: 20150520072600) do
     t.string   "course_id",     default: "1", null: false
     t.string   "document_type"
   end
+
+  add_index "documents", ["course_id"], name: "index_documents_on_course_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
