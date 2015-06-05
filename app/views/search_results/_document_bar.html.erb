@@ -16,25 +16,27 @@
               <div class="col-sm-3"><%= link_to document.description, preview_document_path(document_id: document.id) %></div>
               <div class="col-sm-3"><%= document.quarter + " " + document.year %></div>
   	          <div class="col-sm-3"><%= document.document.file.extension.downcase %></div>
-  	          <div class="col-sm-3"><%= link_to "Report Spam", report_spam_path(document_id: document.id), :class => "btn", :remote => true, "data-toggle" => "modal", "data-target" => "#spam-window" %>
-                <div class="modal fade" id="spam-window" tabindex="-1" role="dialog" aria-labelledby="spam-modal" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                          <h4 class="modal-title" id="spam-modal">Report Spam</h4>
-                        </div> <!-- End Modal Header -->
-                        <div class="modal-body">
-                          Are you sure you want to report this document as spam?
-                        </div>
-                        <div class="modal-footer reportspam">
-                          <%= link_to 'Yes', document_spam_path(description:document.description, document_id: document.id, reporter: current_user.email), class: 'btn btn-default', remote: true, id: 'yes' %>
-                          <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
-                        </div>                    
-                      </div> <!-- End Modal Content -->
-                    </div> <!-- End Modal Dialog -->
+              <% if user_signed_in? %>
+  	            <div class="col-sm-3"><%= link_to "Report Spam", report_spam_path(document_id: document.id), :class => "btn", :remote => true, "data-toggle" => "modal", "data-target" => "#spam-window" %>
+                  <div class="modal fade" id="spam-window" tabindex="-1" role="dialog" aria-labelledby="spam-modal" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="spam-modal">Report Spam</h4>
+                          </div> <!-- End Modal Header -->
+                          <div class="modal-body">
+                            Are you sure you want to report this document as spam?
+                          </div>
+                          <div class="modal-footer reportspam">
+                            <%= link_to 'Yes', document_spam_path(description:document.description, document_id: document.id, reporter: current_user.email), class: 'btn btn-default', remote: true, id: 'yes' %>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+                          </div>                    
+                        </div> <!-- End Modal Content -->
+                      </div> <!-- End Modal Dialog -->
+                  </div>
                 </div>
-              </div>
+              <% end %>
             <% else %>
               <div class="col-sm-3"><%= document.description %></div>
 	            <div class="col-sm-3"><%= document.quarter + " " + document.year %></div>
